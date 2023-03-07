@@ -1,0 +1,15 @@
+﻿global using Hkust.Cus.Entities;
+global using Hkust.Infra.Entities;
+global using Hkust.Infra.EventBus.Cap;
+global using Hkust.Infra.IdGenerater.Yitter;
+global using Hkust.Infra.IRepositories;
+global using Hkust.Infra.Redis;
+global using Hkust.Infra.Redis.Caching;
+global using Hkust.UnitTest.Fixtures;
+global using DotNetCore.CAP;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using System.Linq.Expressions;
+global using Xunit;
+global using Xunit.Abstractions;

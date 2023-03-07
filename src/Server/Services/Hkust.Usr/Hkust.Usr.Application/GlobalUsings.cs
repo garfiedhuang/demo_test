@@ -1,0 +1,27 @@
+﻿global using Hkust.Infra.Core.Configuration;
+global using Hkust.Infra.Helper;
+global using Hkust.Infra.IdGenerater.Yitter;
+global using Hkust.Infra.IRepositories;
+global using Hkust.Infra.Redis;
+global using Hkust.Infra.Redis.Caching;
+global using Hkust.Infra.Redis.Caching.Configurations;
+global using Hkust.Shared.Application.BloomFilter;
+global using Hkust.Shared.Application.Caching;
+global using Hkust.Shared.Application.Channels;
+global using Hkust.Shared.Application.Contracts.Dtos;
+global using Hkust.Shared.Application.Contracts.ResultModels;
+global using Hkust.Shared.Application.Services;
+global using Hkust.Shared.Consts.Caching.Usr;
+global using Hkust.Shared.Repository.MongoEntities;
+global using Hkust.Usr.Application.Caching;
+global using Hkust.Usr.Application.Contracts.Dtos;
+global using Hkust.Usr.Application.Contracts.Services;
+global using Hkust.Usr.Entities;
+global using Hkust.Usr.Repository.Extensions;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Options;
+global using System.Linq.Expressions;
+global using System.Net;
+global using System.Reflection;
+

@@ -1,0 +1,13 @@
+.vs
+bin
+obj
+txtlogs
+*.user
+*.pubxml
+node_modules
+/README.html
+/src/Client/package-lock.json
+/src/Client/dist
+/src/Client/target/npmlist.json
+/src/Server/.sonarqube
+/src/Server/.sonarlint

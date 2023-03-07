@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<Import Project="..\..\..\build\common.props" />
+	<PropertyGroup>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..</DockerfileContext>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<Description>运维中心服务</Description>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="swagger_miniprofiler.html" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="swagger_miniprofiler.html">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.6">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.6">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Grpc.AspNetCore" Version="2.47.0" />
+		<Protobuf Include="..\..\Shared\Hkust.Shared.Rpc\Protos\Services\maintgrpc.proto" GrpcServices="Server" Link="Grpc\Protos\Services\maintgrpc.proto" ProtoRoot="..\..\Shared\Hkust.Shared.Rpc\" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Shared\Hkust.Shared.WebApi\Hkust.Shared.WebApi.csproj" />
+		<ProjectReference Include="..\Hkust.Maint.Application.Contracts\Hkust.Maint.Application.Contracts.csproj" />
+		<ProjectReference Include="..\Hkust.Maint.Application\Hkust.Maint.Application.csproj" />
+	</ItemGroup>
+
+	<ProjectExtensions>
+		<VisualStudio>
+			<UserProperties properties_4launchsettings_1json__JsonSchema="" />
+		</VisualStudio>
+	</ProjectExtensions>
+</Project>

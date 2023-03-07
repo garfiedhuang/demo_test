@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\..\build\common.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>..\Hkust.Cus.WebApi\bin\$(Configuration)</OutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.EfCore.MySQL\Hkust.Infra.Repository.EfCore.MySql.csproj" />
+	</ItemGroup>
+</Project>

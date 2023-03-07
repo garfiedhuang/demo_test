@@ -1,0 +1,11 @@
+﻿global using Hkust.Infra.Core.Guard;
+global using Hkust.Infra.Entities;
+global using Hkust.Infra.IRepositories;
+global using Hkust.Infra.Repository.EfCore.Internal;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.ChangeTracking;
+global using Microsoft.EntityFrameworkCore.Storage;
+global using System.Data;
+global using System.Linq.Expressions;
+global using System.Reflection;
+global using Z.EntityFramework.Plus;

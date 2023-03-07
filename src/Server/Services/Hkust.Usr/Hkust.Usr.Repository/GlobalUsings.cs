@@ -1,0 +1,10 @@
+﻿global using Hkust.Infra.Entities;
+global using Hkust.Infra.IRepositories;
+global using Hkust.Shared.Consts.Entity.Usr;
+global using Hkust.Shared.Repository.EfEntities;
+global using Hkust.Shared.Repository.EfEntities.Config;
+global using Hkust.Usr.Entities;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using System.Collections.ObjectModel;
+global using System.Reflection;
