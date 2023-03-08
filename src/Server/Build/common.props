@@ -6,7 +6,8 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
 		<Authors>Garfield.Huang</Authors>
-		<Product>Hkust</Product>
+		<Product>Hkust Application</Product>
+		<Copyright>Copyright © 2023 HKUST(广州) All Rights Reserved</Copyright>
 		<PackagePrefix>Hkust</PackagePrefix>
 		<PackageIcon>https://xxx.net/images/icon.png</PackageIcon>
 		<RepositoryUrl>https://xxx.net/garfield/hkust</RepositoryUrl>
