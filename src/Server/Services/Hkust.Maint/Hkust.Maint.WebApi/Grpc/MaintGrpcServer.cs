@@ -1,11 +1,11 @@
 ﻿using Hkust.Infras.Mapper;
-using Hkust.Shared.Rpc.Grpc.Messages;
+using Hkust.Common.Rpc.Grpc.Messages;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 
 namespace Hkust.Maint.WebApi.Grpc;
 
-public class MaintGrpcServer : Hkust.Shared.Rpc.Grpc.Services.MaintGrpc.MaintGrpcBase
+public class MaintGrpcServer : Hkust.Common.Rpc.Grpc.Services.MaintGrpc.MaintGrpcBase
 {
     private readonly IDictAppService _dictAppService;
     private readonly IObjectMapper _mapper;

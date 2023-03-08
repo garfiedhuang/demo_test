@@ -1,5 +1,5 @@
-﻿using Hkust.Shared.Consts.Permissions.Cust;
-using Hkust.Shared.WebApi.Authorization;
+﻿using Hkust.Common.Consts.Permissions.Cust;
+using Hkust.Common.WebApi.Authorization;
 
 namespace Hkust.Cus.WebApi.Controllers;
 

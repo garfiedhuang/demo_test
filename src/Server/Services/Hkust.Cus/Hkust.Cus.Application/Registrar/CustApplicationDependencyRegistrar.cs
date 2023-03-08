@@ -1,4 +1,4 @@
-﻿using Hkust.Shared.Application.Registrar;
+﻿using Hkust.Common.Application.Registrar;
 
 namespace Hkust.Cus.Application.Registrar;
 

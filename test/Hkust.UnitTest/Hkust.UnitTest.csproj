@@ -37,7 +37,7 @@
 		<ProjectReference Include="..\..\src\Server\Infras\Repository\Dapper\Hkust.Infras.Repository.Dapper.csproj" />
 		<ProjectReference Include="..\..\src\Server\Infras\Repository\EfCore.MySql\Hkust.Infras.Repository.EfCore.MySql.csproj" />
 		<ProjectReference Include="..\..\src\Server\Services\Hkust.Cus\Hkust.Cus.Repository\Hkust.Cus.Repository.csproj" />
-		<ProjectReference Include="..\..\src\Server\Services\Shared\Hkust.Shared.WebApi\Hkust.Shared.WebApi.csproj" />
+		<ProjectReference Include="..\..\src\Server\Services\Common\Common.WebApi\Hkust.Common.WebApi.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

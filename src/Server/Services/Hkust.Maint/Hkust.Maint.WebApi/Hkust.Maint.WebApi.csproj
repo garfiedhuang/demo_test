@@ -26,10 +26,10 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Grpc.AspNetCore" Version="2.47.0" />
-		<Protobuf Include="..\..\Shared\Hkust.Shared.Rpc\Protos\Services\maintgrpc.proto" GrpcServices="Server" Link="Grpc\Protos\Services\maintgrpc.proto" ProtoRoot="..\..\Shared\Hkust.Shared.Rpc\" />
+		<Protobuf Include="..\..\Common\Common.Rpc\Protos\Services\maintgrpc.proto" GrpcServices="Server" Link="Grpc\Protos\Services\maintgrpc.proto" ProtoRoot="..\..\Common\Common.Rpc\" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\..\Shared\Hkust.Shared.WebApi\Hkust.Shared.WebApi.csproj" />
+		<ProjectReference Include="..\..\Common\Common.WebApi\Hkust.Common.WebApi.csproj" />
 		<ProjectReference Include="..\Hkust.Maint.Application.Contracts\Hkust.Maint.Application.Contracts.csproj" />
 		<ProjectReference Include="..\Hkust.Maint.Application\Hkust.Maint.Application.csproj" />
 	</ItemGroup>

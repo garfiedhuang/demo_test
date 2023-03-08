@@ -5,7 +5,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\..\..\Infras\Redis\Redis.Caching\Hkust.Infras.Redis.Caching.csproj" />
-	  <ProjectReference Include="..\..\Shared\Hkust.Shared.Application.Contracts\Hkust.Shared.Application.Contracts.csproj" />
-	  <ProjectReference Include="..\..\Shared\Hkust.Shared\Hkust.Shared.csproj" />
+	  <ProjectReference Include="..\..\Common\Common.Application.Contracts\Hkust.Common.Application.Contracts.csproj" />
+	  <ProjectReference Include="..\..\Common\Common\Hkust.Common.csproj" />
 	</ItemGroup>
 </Project>

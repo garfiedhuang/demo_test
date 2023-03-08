@@ -28,31 +28,15 @@
 		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\..\Shared\Hkust.Shared.WebApi\Hkust.Shared.WebApi.csproj" />
+		<ProjectReference Include="..\..\Common\Common.WebApi\Hkust.Common.WebApi.csproj" />
 		<ProjectReference Include="..\Hkust.Usr.Application.Contracts\Hkust.Usr.Application.Contracts.csproj" />
 		<ProjectReference Include="..\Hkust.Usr.Application\Hkust.Usr.Application.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<!--<Protobuf Include="..\..\Shared\Hkust.Shared\Protos\Rtos\*.proto" GrpcServices="Server" Link="Grpc\Protos\Rtos\%(RecursiveDir)%(Filename)%(Extension)" ProtoRoot="..\..\Shared\Hkust.Shared\" />-->
-		<Protobuf Include="..\..\Shared\Hkust.Shared.Rpc\Protos\Services\authgrpc.proto" GrpcServices="Server" Link="Grpc\Protos\Services\authgrpc.proto" ProtoRoot="..\..\Shared\Hkust.Shared.Rpc\" />
-		<Protobuf Include="..\..\Shared\Hkust.Shared.Rpc\Protos\Services\usrgrpc.proto" GrpcServices="Server" Link="Grpc\Protos\Services\usrgrpc.proto" ProtoRoot="..\..\Shared\Hkust.Shared.Rpc\" />
+		<!--<Protobuf Include="..\..\Common\Common\Protos\Rtos\*.proto" GrpcServices="Server" Link="Grpc\Protos\Rtos\%(RecursiveDir)%(Filename)%(Extension)" ProtoRoot="..\..\Common\Common\" />-->
+		<Protobuf Include="..\..\Common\Common.Rpc\Protos\Services\authgrpc.proto" GrpcServices="Server" Link="Grpc\Protos\Services\authgrpc.proto" ProtoRoot="..\..\Common\Common.Rpc\" />
+		<Protobuf Include="..\..\Common\Common.Rpc\Protos\Services\usrgrpc.proto" GrpcServices="Server" Link="Grpc\Protos\Services\usrgrpc.proto" ProtoRoot="..\..\Common\Common.Rpc\" />
 	</ItemGroup>
-<!--<Target Name="BuildTheApplicationProject" BeforeTargets="BeforeBuild">
-			<MSBuild Projects="..\Hkust.Usr.Application\Hkust.Usr.Application.csproj" Targets="Build" Properties="Configuration=$(Configuration);Platform=$(Platform)" />
-	</Target>
-	<Target Name="CopyTheApplicationFilesAfterBuild" AfterTargets="AfterBuild">
-		<ItemGroup>
-			<OutputFileToCopy Include="..\Hkust.Usr.Application\bin\$(Configuration)\$(TargetFramework)\*.*" />
-		</ItemGroup>
-		<Copy SkipUnchangedFiles="true" SourceFiles="@(OutputFileToCopy)" DestinationFolder=".\bin\$(Configuration)\$(TargetFramework)" />
-		<Copy SkipUnchangedFiles="true" SourceFiles="@(OutputFileToCopy)" DestinationFolder=".\bin\$(Configuration)\$(TargetFramework)\$(RuntimeIdentifier)" Condition="'$(Configuration)'=='Release'" />
-	</Target>
-	<Target Name="CopyTheApplicationFilesAfterPublish" AfterTargets="AfterPublish">
-		<ItemGroup>
-			<OutputFileToCopy Include=".\bin\$(Configuration)\$(TargetFramework)\$(RuntimeIdentifier)\*.*" />
-		</ItemGroup>
-		<Copy SkipUnchangedFiles="true" SourceFiles="@(OutputFileToCopy)" DestinationFolder="$(PublishUrl)" Condition="'$(Configuration)'=='Release'" />
-	</Target>-->
 	<ProjectExtensions>
 		<VisualStudio><UserProperties /></VisualStudio>
 	</ProjectExtensions>

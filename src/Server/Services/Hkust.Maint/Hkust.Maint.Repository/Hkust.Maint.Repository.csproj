@@ -5,7 +5,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\..\..\Infras\Repository\Base\Hkust.Infras.Repository.csproj" />
-	  <ProjectReference Include="..\..\Shared\Hkust.Shared.Repository\Hkust.Shared.Repository.csproj" />
-	  <ProjectReference Include="..\..\Shared\Hkust.Shared\Hkust.Shared.csproj" />
+	  <ProjectReference Include="..\..\Common\Common.Repository\Hkust.Common.Repository.csproj" />
+	  <ProjectReference Include="..\..\Common\Common\Hkust.Common.csproj" />
 	</ItemGroup>
 </Project>

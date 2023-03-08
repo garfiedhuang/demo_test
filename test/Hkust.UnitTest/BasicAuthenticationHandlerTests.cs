@@ -1,4 +1,4 @@
-﻿using Hkust.Shared.Rpc.Handlers.Token;
+﻿using Hkust.Common.Rpc.Handlers.Token;
 
 namespace Hkust.UnitTest.BasicAuthentication;
 

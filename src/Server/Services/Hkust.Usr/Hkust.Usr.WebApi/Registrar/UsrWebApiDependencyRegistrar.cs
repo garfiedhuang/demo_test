@@ -1,4 +1,4 @@
-﻿using Hkust.Shared.WebApi.Registrar;
+﻿using Hkust.Common.WebApi.Registrar;
 using Hkust.Usr.WebApi.Authentication;
 using Hkust.Usr.WebApi.Authorization;
 

@@ -1,4 +1,4 @@
-﻿using Hkust.Shared.Consts.AppSettings;
+﻿using Hkust.Common.Consts.AppSettings;
 using Microsoft.Extensions.Configuration;
 
 namespace Hkust.UnitTest.Fixtures;

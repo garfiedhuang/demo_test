@@ -1,4 +1,4 @@
-﻿using Hkust.Shared.Application.Contracts;
+﻿using Hkust.Common.Application.Contracts;
 
 namespace Hkust.Usr.WebApi.Controllers;
 

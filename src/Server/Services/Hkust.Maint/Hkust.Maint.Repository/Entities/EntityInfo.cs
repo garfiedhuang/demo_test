@@ -1,4 +1,4 @@
-﻿using Hkust.Shared;
+﻿using Hkust.Common;
 
 namespace Hkust.Maint.Entities;
 

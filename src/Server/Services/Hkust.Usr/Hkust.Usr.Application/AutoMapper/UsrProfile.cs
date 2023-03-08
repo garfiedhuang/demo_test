@@ -1,4 +1,4 @@
-﻿using Hkust.Shared.Rpc.Grpc.Messages;
+﻿using Hkust.Common.Rpc.Grpc.Messages;
 using AutoMapper;
 
 namespace Hkust.Usr.Application.AutoMapper;

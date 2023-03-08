@@ -1,9 +1,9 @@
 ﻿global using Hkust.Maint.Application.Contracts.Dtos;
 global using Hkust.Maint.Application.Contracts.Services;
-global using Hkust.Shared;
-global using Hkust.Shared.Application.Contracts.Dtos;
-global using Hkust.Shared.Consts.Permissions.Maint;
-global using Hkust.Shared.WebApi.Authorization;
+global using Hkust.Common;
+global using Hkust.Common.Application.Contracts.Dtos;
+global using Hkust.Common.Consts.Permissions.Maint;
+global using Hkust.Common.WebApi.Authorization;
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Builder;
 global using Microsoft.AspNetCore.Hosting;

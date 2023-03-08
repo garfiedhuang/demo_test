@@ -28,7 +28,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Hkust.Shared.WebApi\Hkust.Shared.WebApi.csproj" />
+    <ProjectReference Include="..\..\Common\Common.WebApi\Hkust.Common.WebApi.csproj" />
     <ProjectReference Include="..\Hkust.Cus.Application.Contracts\Hkust.Cus.Application.Contracts.csproj" />
     <ProjectReference Include="..\Hkust.Cus.Application\Hkust.Cus.Application.csproj" />
   </ItemGroup>

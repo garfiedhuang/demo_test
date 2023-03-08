@@ -1,8 +1,8 @@
 ﻿global using Hkust.Cus.Application.Contracts.Dtos;
 global using Hkust.Cus.Application.Contracts.Services;
-global using Hkust.Shared.Application.Contracts.Dtos;
-global using Hkust.Shared.Rpc.Rest.Rtos;
-global using Hkust.Shared.Rpc.Rest.Services;
+global using Hkust.Common.Application.Contracts.Dtos;
+global using Hkust.Common.Rpc.Rest.Rtos;
+global using Hkust.Common.Rpc.Rest.Services;
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Builder;
 global using Microsoft.AspNetCore.Hosting;

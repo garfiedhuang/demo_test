@@ -1,11 +1,11 @@
 ﻿using Hkust.Infras.Mapper;
-using Hkust.Shared.Rpc.Grpc.Messages;
+using Hkust.Common.Rpc.Grpc.Messages;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 
 namespace Hkust.Usr.WebApi.Grpc;
 
-public class UsrGrpcServer : Hkust.Shared.Rpc.Grpc.Services.UsrGrpc.UsrGrpcBase
+public class UsrGrpcServer : Hkust.Common.Rpc.Grpc.Services.UsrGrpc.UsrGrpcBase
 {
     private readonly IUserAppService _userService;
     private readonly IDeptAppService _deptAppService;

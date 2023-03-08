@@ -1,4 +1,4 @@
-﻿using Hkust.Shared.WebApi.Registrar;
+﻿using Hkust.Common.WebApi.Registrar;
 
 namespace Hkust.Maint.WebApi.Registrar;
 

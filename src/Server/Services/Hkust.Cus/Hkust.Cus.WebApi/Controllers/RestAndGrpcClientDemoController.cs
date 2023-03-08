@@ -1,7 +1,7 @@
-﻿using Hkust.Shared.Rpc;
-using Hkust.Shared.Rpc.Grpc;
-using Hkust.Shared.Rpc.Grpc.Messages;
-using Hkust.Shared.Rpc.Grpc.Services;
+﻿using Hkust.Common.Rpc;
+using Hkust.Common.Rpc.Grpc;
+using Hkust.Common.Rpc.Grpc.Messages;
+using Hkust.Common.Rpc.Grpc.Services;
 
 namespace Hkust.Cus.WebApi.Controllers;
 

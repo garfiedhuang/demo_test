@@ -1,6 +1,6 @@
 ﻿using Hkust.Cus.Application.Services.Caching;
-using Hkust.Shared.Application.Channels;
-using Hkust.Shared.Repository.MongoEntities;
+using Hkust.Common.Application.Channels;
+using Hkust.Common.Repository.MongoEntities;
 
 namespace Hkust.Cus.Application.Services;
 

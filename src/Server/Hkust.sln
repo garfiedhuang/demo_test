@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infras", "Infras", "{3B8991
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0CDC8FFF-393C-4C44-A2D8-996C24C51024}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Shared.WebApi", "Services\Shared\Hkust.Shared.WebApi\Hkust.Shared.WebApi.csproj", "{0ED7E8A9-3092-4E27-9BCF-06186C7252AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.WebApi", "Services\Common\Common.WebApi\Hkust.Common.WebApi.csproj", "{0ED7E8A9-3092-4E27-9BCF-06186C7252AE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Usr", "01.Usr", "{EB4CD5BA-9A74-4261-8CF3-28B8C7AE8D89}"
 EndProject
@@ -35,17 +35,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Cus.Application.Contr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.UnitTest", "..\..\test\Hkust.UnitTest\Hkust.UnitTest.csproj", "{CC0393F5-E809-4A53-B78F-665E3E1237ED}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Shared", "00.Shared", "{1D4DB6DE-CDE0-4B60-A71D-DFD792C6D864}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Common", "00.Common", "{1D4DB6DE-CDE0-4B60-A71D-DFD792C6D864}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Usr.Repository", "Services\Hkust.Usr\Hkust.Usr.Repository\Hkust.Usr.Repository.csproj", "{0F3C6418-FF43-45F5-A543-BFF6390C68CE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Shared", "Services\Shared\Hkust.Shared\Hkust.Shared.csproj", "{A63A2707-1E9D-481E-8B1D-C90F79E0FEAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common", "Services\Common\Common\Hkust.Common.csproj", "{A63A2707-1E9D-481E-8B1D-C90F79E0FEAF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Maint.Repository", "Services\Hkust.Maint\Hkust.Maint.Repository\Hkust.Maint.Repository.csproj", "{DBA375C1-A4A7-4D7B-A342-EA1D4C6F8B16}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Cus.Repository", "Services\Hkust.Cus\Hkust.Cus.Repository\Hkust.Cus.Repository.csproj", "{7C82C02B-8E8E-413B-8291-41946456F9AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Shared.Application", "Services\Shared\Hkust.Shared.Application\Hkust.Shared.Application.csproj", "{382E6BFE-F809-4E29-BEAB-57BA9C7FA69B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Application", "Services\Common\Common.Application\Hkust.Common.Application.csproj", "{382E6BFE-F809-4E29-BEAB-57BA9C7FA69B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bulid", "Bulid", "{5F46F98A-6505-4767-82A7-95B0E12060AC}"
 	ProjectSection(SolutionItems) = preProject
@@ -53,15 +53,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bulid", "Bulid", "{5F46F98A
 		build\version.props = build\version.props
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Shared.Application.Contracts", "Services\Shared\Hkust.Shared.Application.Contracts\Hkust.Shared.Application.Contracts.csproj", "{014411C4-C3BA-4AC7-8B26-6976897F1881}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Application.Contracts", "Services\Common\Common.Application.Contracts\Hkust.Common.Application.Contracts.csproj", "{014411C4-C3BA-4AC7-8B26-6976897F1881}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Usr.Application", "Services\Hkust.Usr\Hkust.Usr.Application\Hkust.Usr.Application.csproj", "{ABA5BFEF-7D6A-4379-86FD-F34403FECF4F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Shared.Rpc", "Services\Shared\Hkust.Shared.Rpc\Hkust.Shared.Rpc.csproj", "{6E1862F8-B908-4AD3-AD2F-188F0C151A26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Rpc", "Services\Common\Common.Rpc\Hkust.Common.Rpc.csproj", "{6E1862F8-B908-4AD3-AD2F-188F0C151A26}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.PerformTest", "..\..\test\Hkust.PerformTest\Hkust.PerformTest.csproj", "{15859381-1082-437B-8F49-A92B0D89B846}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Shared.Repository", "Services\Shared\Hkust.Shared.Repository\Hkust.Shared.Repository.csproj", "{40BFB7DF-3924-4A17-A02D-6D04AF002CFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Repository", "Services\Common\Common.Repository\Hkust.Common.Repository.csproj", "{40BFB7DF-3924-4A17-A02D-6D04AF002CFD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consul", "Consul", "{DBCA885D-3068-430E-B195-0E0F53598CDF}"
 EndProject
