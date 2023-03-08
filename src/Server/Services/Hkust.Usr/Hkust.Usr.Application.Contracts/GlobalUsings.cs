@@ -1,4 +1,4 @@
-﻿global using Hkust.Infra.Redis.Caching.Core.Interceptor;
+﻿global using Hkust.Infras.Redis.Caching.Core.Interceptor;
 global using Hkust.Shared.Application.Contracts.Attributes;
 global using Hkust.Shared.Application.Contracts.Dtos;
 global using Hkust.Shared.Application.Contracts.DtoValidator;

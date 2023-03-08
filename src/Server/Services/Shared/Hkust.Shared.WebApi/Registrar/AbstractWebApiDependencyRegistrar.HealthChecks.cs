@@ -1,5 +1,5 @@
-﻿using Hkust.Infra.EventBus.Configurations;
-using Hkust.Infra.EventBus.RabbitMq;
+﻿using Hkust.Infras.EventBus.Configurations;
+using Hkust.Infras.EventBus.RabbitMq;
 using Hkust.Shared.Consts.AppSettings;
 using RabbitMQ.Client;
 

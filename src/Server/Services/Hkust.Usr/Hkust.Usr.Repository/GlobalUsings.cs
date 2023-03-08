@@ -1,5 +1,5 @@
-﻿global using Hkust.Infra.Entities;
-global using Hkust.Infra.IRepositories;
+﻿global using Hkust.Infras.Entities;
+global using Hkust.Infras.IRepositories;
 global using Hkust.Shared.Consts.Entity.Usr;
 global using Hkust.Shared.Repository.EfEntities;
 global using Hkust.Shared.Repository.EfEntities.Config;

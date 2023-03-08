@@ -1,4 +1,4 @@
-﻿namespace Hkust.Infra.Mapper;
+﻿namespace Hkust.Infras.Mapper;
 
 public static class ObjectMapperExtension
 {

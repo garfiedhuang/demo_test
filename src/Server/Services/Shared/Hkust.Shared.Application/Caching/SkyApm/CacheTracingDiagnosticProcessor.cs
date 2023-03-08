@@ -2,7 +2,7 @@
 
 public sealed class CacheTracingDiagnosticProcessor : ITracingDiagnosticProcessor
 {
-    public static readonly StringOrIntValue Caching = new (nameof(Hkust.Infra.Redis.Caching));
+    public static readonly StringOrIntValue Caching = new (nameof(Hkust.Infras.Redis.Caching));
     private readonly ITracingContext _tracingContext;
     private readonly IEntrySegmentContextAccessor _entrySegmentContextAccessor;
     private readonly IExitSegmentContextAccessor _exitSegmentContextAccessor;

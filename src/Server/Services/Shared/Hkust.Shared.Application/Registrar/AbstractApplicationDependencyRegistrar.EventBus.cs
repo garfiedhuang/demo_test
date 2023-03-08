@@ -1,5 +1,5 @@
-﻿using Hkust.Infra.EventBus.Configurations;
-using Hkust.Infra.Repository.EfCore.MySql.Configurations;
+﻿using Hkust.Infras.EventBus.Configurations;
+using Hkust.Infras.Repository.EfCore.MySql.Configurations;
 using DotNetCore.CAP;
 using Microsoft.EntityFrameworkCore;
 using SkyApm.Diagnostics.CAP;

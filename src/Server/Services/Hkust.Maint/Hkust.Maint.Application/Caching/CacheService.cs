@@ -1,4 +1,4 @@
-﻿using Hkust.Infra.Core.Interfaces;
+﻿using Hkust.Infras.Core.Interfaces;
 
 namespace Hkust.Maint.Application.Services.Caching;
 

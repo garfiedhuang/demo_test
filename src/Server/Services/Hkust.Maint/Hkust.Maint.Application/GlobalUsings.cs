@@ -1,9 +1,9 @@
-﻿global using Hkust.Infra.Redis;
-global using Hkust.Infra.Redis.Caching;
-global using Hkust.Infra.Redis.Caching.Configurations;
-global using Hkust.Infra.EventBus.RabbitMq;
-global using Hkust.Infra.IdGenerater.Yitter;
-global using Hkust.Infra.IRepositories;
+﻿global using Hkust.Infras.Redis;
+global using Hkust.Infras.Redis.Caching;
+global using Hkust.Infras.Redis.Caching.Configurations;
+global using Hkust.Infras.EventBus.RabbitMq;
+global using Hkust.Infras.IdGenerater.Yitter;
+global using Hkust.Infras.IRepositories;
 global using Hkust.Maint.Application.Contracts.Dtos;
 global using Hkust.Maint.Application.Contracts.Services;
 global using Hkust.Maint.Application.Services.Caching;

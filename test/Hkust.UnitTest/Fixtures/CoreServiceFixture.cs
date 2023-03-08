@@ -15,7 +15,7 @@ public class CoreServiceFixture
             {
                 Id = 1600000000000,
                 Account = "alpha2008",
-                Name = "余小猫"
+                Name = "加菲猫"
             };
         });
 

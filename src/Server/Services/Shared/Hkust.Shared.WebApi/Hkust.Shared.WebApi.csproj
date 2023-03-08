@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\..\build\common.props" />
+	<Import Project="..\..\build\common.props" />
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
@@ -58,10 +58,10 @@
 		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.1" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Consul\Hkust.Infra.Consul.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.EventBus\Hkust.Infra.EventBus.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Helper\Hkust.Infra.Helper.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Redis.Caching\Hkust.Infra.Redis.Caching.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Consul\Hkust.Infras.Consul.csproj" />
+		<ProjectReference Include="..\..\..\Infras\EventBus\Hkust.Infras.EventBus.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Helper\Hkust.Infras.Helper.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Redis\Redis.Caching\Hkust.Infras.Redis.Caching.csproj" />
 		<ProjectReference Include="..\Hkust.Shared.Application.Contracts\Hkust.Shared.Application.Contracts.csproj" />
 		<ProjectReference Include="..\Hkust.Shared.Rpc\Hkust.Shared.Rpc.csproj" />
 		<ProjectReference Include="..\Hkust.Shared\Hkust.Shared.csproj" />

@@ -1,5 +1,5 @@
-﻿using Hkust.Infra.Consul.Discover.GrpcResolver;
-using Hkust.Infra.Consul.Discover.Handler;
+﻿using Hkust.Infras.Consul.Discover.GrpcResolver;
+using Hkust.Infras.Consul.Discover.Handler;
 using Hkust.Shared.Consts.AppSettings;
 using Hkust.Shared.Consts.RegistrationCenter;
 using Hkust.Shared.Rpc.Handlers;

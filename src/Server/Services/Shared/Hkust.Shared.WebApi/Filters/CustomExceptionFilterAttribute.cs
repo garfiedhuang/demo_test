@@ -1,4 +1,4 @@
-﻿using Hkust.Infra.Core.Exceptions;
+﻿using Hkust.Infras.Core.Exceptions;
 using Microsoft.AspNetCore.Mvc.Controllers;
 
 namespace Microsoft.AspNetCore.Mvc.Filters;

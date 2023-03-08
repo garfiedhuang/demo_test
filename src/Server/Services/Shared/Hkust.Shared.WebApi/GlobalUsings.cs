@@ -1,9 +1,9 @@
-﻿global using Hkust.Infra.Redis.Configurations;
-global using Hkust.Infra.Redis.Caching;
-global using Hkust.Infra.Core.Configuration;
-global using Hkust.Infra.Core.DependencyInjection;
-global using Hkust.Infra.Core.Interfaces;
-global using Hkust.Infra.Core.Json;
+﻿global using Hkust.Infras.Redis.Configurations;
+global using Hkust.Infras.Redis.Caching;
+global using Hkust.Infras.Core.Configuration;
+global using Hkust.Infras.Core.DependencyInjection;
+global using Hkust.Infras.Core.Interfaces;
+global using Hkust.Infras.Core.Json;
 global using Hkust.Shared;
 global using Hkust.Shared.Application.Contracts.ResultModels;
 global using Hkust.Shared.Rpc.Handlers.Token;

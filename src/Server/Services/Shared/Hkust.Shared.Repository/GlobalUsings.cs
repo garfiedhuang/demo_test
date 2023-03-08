@@ -1,4 +1,4 @@
-﻿global using Hkust.Infra.Entities;
+﻿global using Hkust.Infras.Entities;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
 global using MongoDB.Bson.Serialization.Attributes;

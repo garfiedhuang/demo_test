@@ -1,4 +1,4 @@
-﻿global using Hkust.Infra.Core.Configuration;
+﻿global using Hkust.Infras.Core.Configuration;
 global using Hkust.Shared;
 global using Hkust.Shared.Application.Contracts.Dtos;
 global using Hkust.Shared.Consts.Permissions.Usr;

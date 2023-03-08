@@ -1,12 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\..\build\common.props" />
+	<Import Project="..\..\build\common.props" />
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.1.0" />
   </ItemGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Infras\Hkust.Infra.Core\Hkust.Infra.Core.csproj" />
+    <ProjectReference Include="..\..\..\Infras\Core\Hkust.Infras.Core.csproj" />
   </ItemGroup>
 
 </Project>

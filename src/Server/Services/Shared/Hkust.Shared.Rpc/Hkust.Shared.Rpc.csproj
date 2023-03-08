@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\..\build\common.props" />
+	<Import Project="..\..\build\common.props" />
 	<PropertyGroup>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
@@ -16,8 +16,8 @@
 		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Core\Hkust.Infra.Core.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Helper\Hkust.Infra.Helper.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Core\Hkust.Infras.Core.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Helper\Hkust.Infras.Helper.csproj" />
 		<ProjectReference Include="..\Hkust.Shared\Hkust.Shared.csproj" />
 	</ItemGroup>
 	<ItemGroup>

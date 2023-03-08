@@ -1,4 +1,4 @@
-﻿using Hkust.Infra.Consul.Configuration;
+﻿using Hkust.Infras.Consul.Configuration;
 using Hkust.Shared.Consts.AppSettings;
 using Hkust.Shared.WebApi;
 using NLog;

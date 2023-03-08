@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\..\build\common.props" />
+	<Import Project="..\..\build\common.props" />
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
 	<ItemGroup>
 		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.1.0" />
@@ -12,16 +12,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Consul\Hkust.Infra.Consul.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Core\Hkust.Infra.Core.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Dapper\Hkust.Infra.Repository.Dapper.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.EfCore.MySQL\Hkust.Infra.Repository.EfCore.MySql.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.EventBus\Hkust.Infra.EventBus.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Helper\Hkust.Infra.Helper.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.IdGenerater\Hkust.Infra.IdGenerater.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Mapper\Hkust.Infra.Mapper.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Mongo\Hkust.Infra.Repository.Mongo.csproj" />
-		<ProjectReference Include="..\..\..\Infras\Hkust.Infra.Redis.Caching\Hkust.Infra.Redis.Caching.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Consul\Hkust.Infras.Consul.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Core\Hkust.Infras.Core.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Repository\Dapper\Hkust.Infras.Repository.Dapper.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Repository\EfCore.MySQL\Hkust.Infras.Repository.EfCore.MySql.csproj" />
+		<ProjectReference Include="..\..\..\Infras\EventBus\Hkust.Infras.EventBus.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Helper\Hkust.Infras.Helper.csproj" />
+		<ProjectReference Include="..\..\..\Infras\IdGenerater\Hkust.Infras.IdGenerater.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Mapper\Hkust.Infras.Mapper.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Redis\Redis.Caching\Hkust.Infras.Redis.Caching.csproj" />
+		<ProjectReference Include="..\..\..\Infras\Repository\Mongo\Hkust.Infras.Repository.Mongo.csproj" />
 		<ProjectReference Include="..\Hkust.Shared.Application.Contracts\Hkust.Shared.Application.Contracts.csproj" />
 		<ProjectReference Include="..\Hkust.Shared.Repository\Hkust.Shared.Repository.csproj" />
 		<ProjectReference Include="..\Hkust.Shared.Rpc\Hkust.Shared.Rpc.csproj" />

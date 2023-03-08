@@ -1,4 +1,4 @@
-﻿global using Hkust.Infra.Entities;
+﻿global using Hkust.Infras.Entities;
 global using Hkust.Shared.Consts.Entity.Cust;
 global using Hkust.Shared.Repository.EfEntities;
 global using Hkust.Shared.Repository.EfEntities.Config;

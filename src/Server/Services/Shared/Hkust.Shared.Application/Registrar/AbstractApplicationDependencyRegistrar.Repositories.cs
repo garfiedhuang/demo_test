@@ -1,7 +1,7 @@
-﻿using Hkust.Infra.Repository.EfCore.MySql.Configurations;
-using Hkust.Infra.Repository.Mongo;
-using Hkust.Infra.Repository.Mongo.Configuration;
-using Hkust.Infra.Repository.Mongo.Extensions;
+﻿using Hkust.Infras.Repository.EfCore.MySql.Configurations;
+using Hkust.Infras.Repository.Mongo;
+using Hkust.Infras.Repository.Mongo.Configuration;
+using Hkust.Infras.Repository.Mongo.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hkust.Shared.Application.Registrar;

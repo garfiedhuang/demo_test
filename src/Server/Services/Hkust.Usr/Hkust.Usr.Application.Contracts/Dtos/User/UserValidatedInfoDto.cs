@@ -1,4 +1,4 @@
-﻿using Hkust.Infra.Helper;
+﻿using Hkust.Infras.Helper;
 
 namespace Hkust.Usr.Application.Contracts.Dtos
 {

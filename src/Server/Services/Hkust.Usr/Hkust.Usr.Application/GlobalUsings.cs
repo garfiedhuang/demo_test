@@ -1,10 +1,10 @@
-﻿global using Hkust.Infra.Core.Configuration;
-global using Hkust.Infra.Helper;
-global using Hkust.Infra.IdGenerater.Yitter;
-global using Hkust.Infra.IRepositories;
-global using Hkust.Infra.Redis;
-global using Hkust.Infra.Redis.Caching;
-global using Hkust.Infra.Redis.Caching.Configurations;
+﻿global using Hkust.Infras.Core.Configuration;
+global using Hkust.Infras.Helper;
+global using Hkust.Infras.IdGenerater.Yitter;
+global using Hkust.Infras.IRepositories;
+global using Hkust.Infras.Redis;
+global using Hkust.Infras.Redis.Caching;
+global using Hkust.Infras.Redis.Caching.Configurations;
 global using Hkust.Shared.Application.BloomFilter;
 global using Hkust.Shared.Application.Caching;
 global using Hkust.Shared.Application.Channels;

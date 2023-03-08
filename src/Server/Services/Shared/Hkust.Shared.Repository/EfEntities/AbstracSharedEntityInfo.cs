@@ -1,4 +1,4 @@
-﻿using Hkust.Infra.IRepositories;
+﻿using Hkust.Infras.IRepositories;
 
 namespace Hkust.Shared.Repository.EfEntities;
 

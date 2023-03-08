@@ -1,4 +1,4 @@
-﻿global using Hkust.Infra.Core.Json;
+﻿global using Hkust.Infras.Core.Json;
 global using System.Net;
 global using System.Text.Json;
 global using System.Text.Json.Serialization;

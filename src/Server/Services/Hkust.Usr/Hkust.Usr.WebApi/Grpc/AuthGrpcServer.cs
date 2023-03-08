@@ -1,4 +1,4 @@
-﻿using Hkust.Infra.Mapper;
+﻿using Hkust.Infras.Mapper;
 using Hkust.Shared.Rpc.Grpc.Messages;
 using Hkust.Shared.Rpc.Grpc.Services;
 using Google.Protobuf.WellKnownTypes;
