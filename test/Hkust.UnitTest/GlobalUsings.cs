@@ -1,10 +1,10 @@
 ﻿global using Hkust.Cus.Entities;
-global using Hkust.Infra.Entities;
-global using Hkust.Infra.EventBus.Cap;
-global using Hkust.Infra.IdGenerater.Yitter;
-global using Hkust.Infra.IRepositories;
-global using Hkust.Infra.Redis;
-global using Hkust.Infra.Redis.Caching;
+global using Hkust.Infras.Entities;
+global using Hkust.Infras.EventBus.Cap;
+global using Hkust.Infras.IdGenerater.Yitter;
+global using Hkust.Infras.IRepositories;
+global using Hkust.Infras.Redis;
+global using Hkust.Infras.Redis.Caching;
 global using Hkust.UnitTest.Fixtures;
 global using DotNetCore.CAP;
 global using Microsoft.EntityFrameworkCore;

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\build\common.props" />
+	<PropertyGroup>
+		<Nullable>enable</Nullable>
+		<BaseOutputPath></BaseOutputPath>
+		<RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Consul" Version="1.6.10.6" />
+		<PackageReference Include="Grpc.Net.Client" Version="2.47.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Core\Hkust.Infras.Core.csproj" />
+	</ItemGroup>
+</Project>

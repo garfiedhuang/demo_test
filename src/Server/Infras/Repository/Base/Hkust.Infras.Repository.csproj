@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\build\common.props" />
+	<PropertyGroup>
+		<Nullable>enable</Nullable>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Remove="Entities\EfEnities\Extensions\**" />
+	  <EmbeddedResource Remove="Entities\EfEnities\Extensions\**" />
+	  <None Remove="Entities\EfEnities\Extensions\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MongoDB.Bson" Version="2.16.1" />
+		<PackageReference Include="MongoDB.Driver" Version="2.16.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Core\Hkust.Infras.Core.csproj" />
+	</ItemGroup>
+</Project>

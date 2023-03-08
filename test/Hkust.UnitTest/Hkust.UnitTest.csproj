@@ -32,12 +32,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Server\Infras\Hkust.Infra.Dapper\Hkust.Infra.Repository.Dapper.csproj" />
-		<ProjectReference Include="..\..\src\Server\Infras\Hkust.Infra.EfCore.MySQL\Hkust.Infra.Repository.EfCore.MySql.csproj" />
-		<ProjectReference Include="..\..\src\Server\Infras\Hkust.Infra.Helper\Hkust.Infra.Helper.csproj" />
-		<ProjectReference Include="..\..\src\Server\Infras\Hkust.Infra.IdGenerater\Hkust.Infra.IdGenerater.csproj" />
 		<ProjectReference Include="..\..\src\Server\Services\Hkust.Cus\Hkust.Cus.Repository\Hkust.Cus.Repository.csproj" />
 		<ProjectReference Include="..\..\src\Server\Services\Shared\Hkust.Shared.WebApi\Hkust.Shared.WebApi.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="Hkust.Infras.Helper">
+	    <HintPath>..\..\src\Server\Libs\Hkust.Infras.Helper.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Hkust.Infras.IdGenerater">
+	    <HintPath>..\..\src\Server\Libs\Hkust.Infras.IdGenerater.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Hkust.Infras.Repository.Dapper">
+	    <HintPath>..\..\src\Server\Libs\Hkust.Infras.Repository.Dapper.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Hkust.Infras.Repository.EfCore.MySql">
+	    <HintPath>..\..\src\Server\Libs\Hkust.Infras.Repository.EfCore.MySql.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 
 	<ItemGroup>

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\build\common.props" />
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="MySqlConnector" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Repository\Base\Hkust.Infras.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
