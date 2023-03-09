@@ -20,7 +20,7 @@ public sealed class UsrWebApiDependencyRegistrar : AbstractWebApiDependencyRegis
     {
         AddWebApiDefault<BearerAuthenticationLocalProcessor, PermissionLocalHandler>();//Authentication 认证  ==>BearerAuthenticationLocalProcessor ---> Authorization 授权==>PermissionLocalHandler
         AddHealthChecks(true, true, true, false);//健康检查服务,可选项 add by garfield 20230308
-        Services.AddGrpc();//GRPC
+        Services.AddGrpc();//注册GRPC服务至容器中
     }
 
     public override void UseHkust()

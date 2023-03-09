@@ -22,6 +22,6 @@ public sealed class MaintApplicationDependencyRegistrar : AbstractApplicationDep
         AddRestClient<IAuthRestClient>(RpcConsts.UsrService, restPolicies);
         AddRestClient<IUsrRestClient>(RpcConsts.UsrService, restPolicies);
 
-        AddRabbitMqClient();
+        //AddRabbitMqClient();//取消执行RabbitMq的消费者 mark by garfield 20230309
     }
 }

@@ -23,13 +23,13 @@ public sealed class CustApplicationDependencyRegistrar : AbstractApplicationDepe
         AddRestClient<IAuthRestClient>(RpcConsts.UsrService, restPolicies);
         AddRestClient<IUsrRestClient>(RpcConsts.UsrService, restPolicies);
         AddRestClient<IMaintRestClient>(RpcConsts.MaintService, restPolicies);
-        AddRestClient<IWhseRestClient>(RpcConsts.WhseService, restPolicies);
+        //AddRestClient<IWhseRestClient>(RpcConsts.WhseService, restPolicies);//mark by garfield 20230309
         //rpc-grpcclient
         var gprcPolicies = this.GenerateDefaultGrpcPolicies();
         AddGrpcClient<AuthGrpc.AuthGrpcClient>(RpcConsts.UsrService, gprcPolicies);
         AddGrpcClient<UsrGrpc.UsrGrpcClient>(RpcConsts.UsrService, gprcPolicies);
         AddGrpcClient<MaintGrpc.MaintGrpcClient>(RpcConsts.MaintService, gprcPolicies);
-        AddGrpcClient<WhseGrpc.WhseGrpcClient>(RpcConsts.WhseService, gprcPolicies);
+        //AddGrpcClient<WhseGrpc.WhseGrpcClient>(RpcConsts.WhseService, gprcPolicies);//mark by garfield 20230309
         //rpc-even
         AddCapEventBus<CapEventSubscriber>();
     }
