@@ -19,8 +19,8 @@ public static class ServiceCollectionExtension
         if (webApiRegistarType is null)
             throw new NullReferenceException(nameof(IDependencyRegistrar));
 
-        var webapiRegistar = Activator.CreateInstance(webApiRegistarType, services)  as IDependencyRegistrar;//动态创建当前工程下依赖注入实例， services构造函数参数
-        webapiRegistar.AddHkust();//统一注册服务
+        var webapiRegistar = Activator.CreateInstance(webApiRegistarType, services) as IDependencyRegistrar;//动态创建当前Hkust.XXX.WebApi工程下依赖注入实例(如：UsrWebApiDependencyRegistrar)， services构造函数参数
+        webapiRegistar.AddHkust();//统一注册通用服务 mark by garfield 20230308
 
         return services;
     }

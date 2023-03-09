@@ -19,15 +19,15 @@ public sealed class UsrWebApiDependencyRegistrar : AbstractWebApiDependencyRegis
     public override void AddHkust()//统一注册服务
     {
         AddWebApiDefault<BearerAuthenticationLocalProcessor, PermissionLocalHandler>();//Authentication 认证  ==>BearerAuthenticationLocalProcessor ---> Authorization 授权==>PermissionLocalHandler
-        AddHealthChecks(true, true, true, false);
-        Services.AddGrpc();
+        AddHealthChecks(true, true, true, false);//健康检查服务,可选项 add by garfield 20230308
+        Services.AddGrpc();//GRPC
     }
 
     public override void UseHkust()
     {
         UseWebApiDefault(endpointRoute: endpoint =>
         {
-            endpoint.MapGrpcService<Grpc.AuthGrpcServer>();
+            endpoint.MapGrpcService<Grpc.AuthGrpcServer>();//暴露GRPC服务 mark by garfield 20230308
             endpoint.MapGrpcService<Grpc.UsrGrpcServer>();
         });
     }

@@ -1,5 +1,8 @@
 ﻿namespace Hkust.Usr.WebApi.Authentication;
 
+/// <summary>
+/// 身份认证
+/// </summary>
 public class BearerAuthenticationLocalProcessor : AbstractAuthenticationProcessor
 {
     private readonly IAccountAppService _accountAppService;

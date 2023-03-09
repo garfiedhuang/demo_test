@@ -14,7 +14,7 @@ public static class WebApplicationBuilderExtension
     /// <param name="serviceInfo"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentNullException"></exception>
-    public static WebApplicationBuilder ConfigureAdncDefault(this WebApplicationBuilder builder, IServiceInfo serviceInfo)
+    public static WebApplicationBuilder ConfigureHkustDefault(this WebApplicationBuilder builder, IServiceInfo serviceInfo)
     {
         if (builder is null)
             throw new ArgumentNullException(nameof(builder));

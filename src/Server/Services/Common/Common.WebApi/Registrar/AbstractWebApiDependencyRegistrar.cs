@@ -43,9 +43,9 @@ public abstract partial class AbstractWebApiDependencyRegistrar : IDependencyReg
         where TAuthorizationHandler : AbstractPermissionHandler
     {
         Services
-            .AddHttpContextAccessor()
-            .AddMemoryCache();
-        Configure();//JWT配置，线程池配置，Kestrel配置 注入IOC mark by garfield 20221019
+            .AddHttpContextAccessor()//获取上下文实例HttpContext
+            .AddMemoryCache();//启用内存缓存（IMemoryCache）服务
+        Configure();//注册配置类到IOC容器：JWT配置，线程池配置，Kestrel配置 注入IOC mark by garfield 20221019
         AddControllers();//控制器注入IOC mark by garfield 20221019
         AddAuthentication<TAuthenticationProcessor>();//添加权限认证服务至IOC mark by garfield 20221019
         AddAuthorization<TAuthorizationHandler>();//添加授权服务

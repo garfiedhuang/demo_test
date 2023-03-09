@@ -47,17 +47,17 @@ public abstract partial class AbstractApplicationDependencyRegistrar : IDependen
     protected virtual void AddApplicaitonDefault()
     {
         Services
-            .AddValidatorsFromAssembly(ContractsLayerAssembly, ServiceLifetime.Scoped)//添加验证模型至IOC by garfield 20221019
-            .AddHkustInfraAutoMapper(ApplicationLayerAssembly)//添加dto映射关系至IOC,所有application层中继承Profile密封类  ===》 by garfield 20221019
+            .AddValidatorsFromAssembly(ContractsLayerAssembly, ServiceLifetime.Scoped)//添加FluentValidation验证模型至IOC by garfield 20221019
+            .AddHkustInfraAutoMapper(ApplicationLayerAssembly)//添加AutoMapper dto映射关系至IOC,所有application层中继承Profile密封类  ===》 by garfield 20221019
             .AddHkustInfraYitterIdGenerater(RedisSection)//添加雪花ID生成服务 by garfield 20221019
-            .AddHkustInfraConsul(ConsulSection)//添加Consual服务 by garfield 20221019
+            .AddHkustInfraConsul(ConsulSection)//可选（如果不用服务发现或注册的话）：添加Consual服务 by garfield 20221019
             .AddHkustInfraDapper();//添加dapper服务  by garfield 20221019
 
         AddApplicationSharedServices();//添加application层共享服务 by garfield 20221019
-        AddAppliactionSerivcesWithInterceptors();
-        AddApplicaitonHostedServices();
-        AddEfCoreContextWithRepositories();
-        AddMongoContextWithRepositries();
+        AddAppliactionSerivcesWithInterceptors(); //注册Application服务,即实现IAppService接口的服务 by garfield 20230308
+        AddApplicaitonHostedServices();//注册Application的IHostedService服务
+        AddEfCoreContextWithRepositories();//注册EFCoreContext与仓储
+        AddMongoContextWithRepositries();//注册MongoContext与仓储
         AddRedisCaching();
         AddBloomFilters();
     }
@@ -81,7 +81,7 @@ public abstract partial class AbstractApplicationDependencyRegistrar : IDependen
 
 
         Services.AddScoped<IMessageTracker, DbMessageTrackerService>();//事件跟踪,DB类型
-        Services.AddScoped<IMessageTracker, RedisMessageTrackerService>();//未实现逻辑
+        Services.AddScoped<IMessageTracker, RedisMessageTrackerService>();//TODO:未实现逻辑 mark by garfield 20230308
         Services.AddScoped<MessageTrackerFactory>();
     }
 }

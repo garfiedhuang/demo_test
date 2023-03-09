@@ -18,7 +18,7 @@ public abstract partial class AbstractApplicationDependencyRegistrar
         if (implType is null)
             throw new NotImplementedException(nameof(IEntityInfo));
         else
-            Services.AddScoped(serviceType, implType);
+            Services.AddScoped(serviceType, implType);//所有实体类,即：Entities目录下的 mark by garfield 20230308
 
         AddEfCoreContext();
     }
@@ -50,6 +50,8 @@ public abstract partial class AbstractApplicationDependencyRegistrar
             //替换默认查询sql生成器,如果通过mycat中间件实现读写分离需要替换默认SQL工厂。
             //options.ReplaceService<IQuerySqlGeneratorFactory, AdncMySqlQuerySqlGeneratorFactory>();
         });
+
+        //TODO: 考虑使用ORACLE数据库 mark by garfield 20230308
     }
 
     /// <summary>

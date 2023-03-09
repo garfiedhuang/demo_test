@@ -16,7 +16,7 @@ internal static class Program
 
             var app = WebApplication
                 .CreateBuilder(args)
-                .ConfigureAdncDefault(serviceInfo)
+                .ConfigureHkustDefault(serviceInfo)
                 .Build();
 
             app.UseHkust();
