@@ -15,30 +15,31 @@ public class RestAndGrpcClientDemoController : HkustControllerBase
     private readonly IAuthRestClient _authRestClient;
     private readonly IUsrRestClient _usrRestClient;
     private readonly IMaintRestClient _maintRestClient;
-    private readonly IWhseRestClient _whseRestClient;
+    //private readonly IWhseRestClient _whseRestClient;
     private readonly AuthGrpc.AuthGrpcClient _authGrpcClinet;
     private readonly UsrGrpc.UsrGrpcClient _usrGrpcClient;
     private readonly MaintGrpc.MaintGrpcClient _maintGrpcClient;
-    private readonly WhseGrpc.WhseGrpcClient _whseGrpcClient;
+    //private readonly WhseGrpc.WhseGrpcClient _whseGrpcClient;
 
     public RestAndGrpcClientDemoController(
     IAuthRestClient authRestClient,
      IUsrRestClient usrRestClient,
      IMaintRestClient maintRestClient,
-     IWhseRestClient whseRestClient,
+     //IWhseRestClient whseRestClient,
      AuthGrpc.AuthGrpcClient authGrpcClinet,
      UsrGrpc.UsrGrpcClient usrGrpcClient,
-     MaintGrpc.MaintGrpcClient maintGrpcClient,
-     WhseGrpc.WhseGrpcClient whseGrpcClient)
+     MaintGrpc.MaintGrpcClient maintGrpcClient//,
+     //WhseGrpc.WhseGrpcClient whseGrpcClient
+        )
     {
         _authRestClient = authRestClient;
         _usrRestClient = usrRestClient;
         _maintRestClient = maintRestClient;
-        _whseRestClient = whseRestClient;
+        //_whseRestClient = whseRestClient;
         _authGrpcClinet = authGrpcClinet;
         _usrGrpcClient = usrGrpcClient;
         _maintGrpcClient = maintGrpcClient;
-        _whseGrpcClient = whseGrpcClient;
+        //_whseGrpcClient = whseGrpcClient;
     }
 
     /// <summary>
@@ -148,6 +149,7 @@ public class RestAndGrpcClientDemoController : HkustControllerBase
     [Route("restproductions")]
     public async Task<IActionResult> GetProductionsAsync()
     {
+        /*
         var searchDto = new ProductSearchListRto()
         {
             Ids = new long[] { 285806185760389, 285806311700101 },
@@ -156,6 +158,10 @@ public class RestAndGrpcClientDemoController : HkustControllerBase
         var restResult = await _whseRestClient.GetProductsAsync(searchDto);
         if (restResult.IsSuccessStatusCode && restResult.Content is not null)
             return Ok(restResult.Content);
+        */
+
+        await Task.FromResult(0);//add by garfield 20230309
+       
         return NoContent();
     }
 
@@ -167,6 +173,7 @@ public class RestAndGrpcClientDemoController : HkustControllerBase
     [Route("grpcproductions")]
     public async Task<IActionResult> GetProductionsGrpcAsync()
     {
+        /*
         var request = new ProductSearchRequest
         {
             StatusCode = 1000
@@ -177,7 +184,10 @@ public class RestAndGrpcClientDemoController : HkustControllerBase
         {
             var unpackResult = grpcResult.Content.Unpack<ProductListReply>();
             return Ok(unpackResult);
-        }
+        }*/
+
+        await Task.FromResult(0);//add by garfield 20230309
+
         return NoContent();
     }
 }
