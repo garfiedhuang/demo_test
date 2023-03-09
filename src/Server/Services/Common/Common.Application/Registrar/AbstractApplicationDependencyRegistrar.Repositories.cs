@@ -47,8 +47,8 @@ public abstract partial class AbstractApplicationDependencyRegistrar
                             .EnableSensitiveDataLogging()
                             .EnableDetailedErrors();
             }
-            //替换默认查询sql生成器,如果通过mycat中间件实现读写分离需要替换默认SQL工厂。
-            //options.ReplaceService<IQuerySqlGeneratorFactory, AdncMySqlQuerySqlGeneratorFactory>();
+            //替换默认查询sql生成器,如果通过mycat中间件实现读写分离需要替换默认SQL工厂。逻辑未实现 mark by garfield 20230309
+            //options.ReplaceService<IQuerySqlGeneratorFactory, HkustMySqlQuerySqlGeneratorFactory>();
         });
 
         //TODO: 考虑使用ORACLE数据库 mark by garfield 20230308

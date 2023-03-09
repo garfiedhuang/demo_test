@@ -3,15 +3,6 @@
 	<PropertyGroup>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
-	<ItemGroup>
-	  <Compile Remove="SqlGenerator\**" />
-	  <EmbeddedResource Remove="SqlGenerator\**" />
-	  <None Remove="SqlGenerator\**" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Remove="AdncInfraEfCoreModule.cs" />
-		<Compile Remove="DbContextFactory.cs" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />

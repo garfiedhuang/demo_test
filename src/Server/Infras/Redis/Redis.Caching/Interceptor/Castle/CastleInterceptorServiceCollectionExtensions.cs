@@ -14,7 +14,7 @@ namespace Hkust.Infras.Redis.Caching.Interceptor.Castle
         /// <param name="options">Hkust.Infras.Redis Interceptor config</param>
         //public static void ConfigureCastleInterceptor(this IServiceCollection services, Action<Hkust.Infras.RedisInterceptorOptions> options)
         //{
-        //    services.TryAddSingleton<IAdnc.Infra.RedisKeyGenerator, DefaultAdnc.Infra.RedisKeyGenerator>();
+        //    services.TryAddSingleton<IHkust.Infra.RedisKeyGenerator, DefaultHkust.Infra.RedisKeyGenerator>();
         //    services.Configure(options);
         //}
     }

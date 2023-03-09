@@ -216,18 +216,18 @@ public class RedisCahceTests : IClassFixture<RedisCacheFixture>
         for (int index = 0; index < 100000; index++) initValues.Add($"hkust{index}");
         await _redisProvider.BfAddAsync(cacheKey, initValues);
 
-        var trueResult = await _redisProvider.BfExistsAsync(cacheKey, "adnc100");
+        var trueResult = await _redisProvider.BfExistsAsync(cacheKey, "hkust100");
         Assert.True(trueResult);
 
         var falseResult = await _redisProvider.BfExistsAsync(cacheKey, "hkust");
         Assert.False(falseResult);
 
-        var values = new List<string>() { "adnc88888", "adnc78888", "adnc68888", "adnc58888" };
+        var values = new List<string>() { "Hkust88888", "Hkust78888", "Hkust68888", "Hkust58888" };
         var results = await _redisProvider.BfExistsAsync(cacheKey, values);
         var trueLength = results.Where(x => x == true).Count();
         Assert.Equal(values.Count, trueLength);
 
-        values = new List<string>() { "danc888889", "danc888888", "danc8888888", "danc8888889" };
+        values = new List<string>() { "Hkust888889", "Hkust888888", "Hkust8888888", "Hkust8888889" };
         results = await _redisProvider.BfExistsAsync(cacheKey, values);
         var falseLength = results.Where(x => x == false).Count();
         Assert.Equal(values.Count, falseLength);

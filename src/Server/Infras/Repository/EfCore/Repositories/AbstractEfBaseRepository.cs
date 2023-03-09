@@ -86,7 +86,7 @@
 
             #endregion removed code
 
-            //实体被标记为Added或者Deleted，抛出异常，ADNC应该不会出现这种状态。
+            //实体被标记为Added或者Deleted，抛出异常，应该不会出现这种状态。
             if (entry.State == EntityState.Added || entry.State == EntityState.Deleted)
                 throw new ArgumentException($"{nameof(entity)},实体状态为{nameof(entry.State)}");
 
