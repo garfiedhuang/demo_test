@@ -1,4 +1,6 @@
-﻿namespace Hkust.Maint.Application.EventSubscribers;
+﻿/* mark by garfield 20230309
+ * 
+namespace Hkust.Maint.Application.EventSubscribers;
 
 /// <summary>
 /// 登录日志消费者
@@ -95,3 +97,4 @@ public sealed class LoginLogMqConsumer : BaseRabbitMqConsumer
         return result;
     }
 }
+*/

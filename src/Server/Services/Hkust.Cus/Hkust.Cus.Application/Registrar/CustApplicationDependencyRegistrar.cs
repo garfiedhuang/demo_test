@@ -30,6 +30,7 @@ public sealed class CustApplicationDependencyRegistrar : AbstractApplicationDepe
         AddGrpcClient<UsrGrpc.UsrGrpcClient>(RpcConsts.UsrService, gprcPolicies);
         AddGrpcClient<MaintGrpc.MaintGrpcClient>(RpcConsts.MaintService, gprcPolicies);
         //AddGrpcClient<WhseGrpc.WhseGrpcClient>(RpcConsts.WhseService, gprcPolicies);//mark by garfield 20230309
+
         //rpc-even
         AddCapEventBus<CapEventSubscriber>();
     }
