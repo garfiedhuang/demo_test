@@ -1,6 +1,6 @@
 ﻿global using Hkust.Cus.Application.Contracts.Dtos;
 global using Hkust.Cus.Application.Contracts.Services;
-global using Hkust.Cus.Application.EventSubscribers;
+//global using Hkust.Cus.Application.EventSubscribers;//mark by garfield 20230309
 global using Hkust.Cus.Entities;
 global using Hkust.Infras.Redis;
 global using Hkust.Infras.Redis.Caching;

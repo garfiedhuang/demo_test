@@ -13,20 +13,20 @@ public class CustomerAppService : AbstractAppService, ICustomerAppService
     private readonly IEfRepository<CustomerFinance> _cusFinaceRepo;
     private readonly IEfRepository<CustomerTransactionLog> _cusTransactionLogRepo;
     private readonly CacheService _cacheService;
-    private readonly IEventPublisher _eventPublisher;
+    //private readonly IEventPublisher _eventPublisher;//mark by garfield 20230309
 
     public CustomerAppService(
         IEfRepository<Customer> customerRepo,
         IEfRepository<CustomerFinance> cusFinaceRepo,
         IEfRepository<CustomerTransactionLog> cusTransactionLogRepo,
-        CacheService cacheService,
-        IEventPublisher eventPublisher)
+        CacheService cacheService/*,//mark by garfield 20230309
+        IEventPublisher eventPublisher*/)
     {
         _customerRepo = customerRepo;
         _cusFinaceRepo = cusFinaceRepo;
         _cusTransactionLogRepo = cusTransactionLogRepo;
         _cacheService = cacheService;
-        _eventPublisher = eventPublisher;
+        //_eventPublisher = eventPublisher;//mark by garfield 20230309
     }
 
     public async Task<AppSrvResult<CustomerDto>> RegisterAsync(CustomerRegisterDto input)
@@ -73,8 +73,8 @@ public class CustomerAppService : AbstractAppService, ICustomerAppService
         //发布充值事件
         var eventId = IdGenerater.GetNextId();
         var eventData = new CustomerRechargedEvent.EventData() { CustomerId = cusTransactionLog.CustomerId, TransactionLogId = cusTransactionLog.Id, Amount = cusTransactionLog.Amount };
-        var eventSource = nameof(RechargeAsync);
-        await _eventPublisher.PublishAsync(new CustomerRechargedEvent(eventId, eventData, eventSource));
+        //var eventSource = nameof(RechargeAsync);
+        //await _eventPublisher.PublishAsync(new CustomerRechargedEvent(eventId, eventData, eventSource));//mark by garfield 20230309
         return new SimpleDto<string>(cusTransactionLog.Id.ToString());
     }
 

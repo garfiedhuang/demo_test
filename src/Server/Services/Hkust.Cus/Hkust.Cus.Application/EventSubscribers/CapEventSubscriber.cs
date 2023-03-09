@@ -1,4 +1,6 @@
-﻿namespace Hkust.Cus.Application.EventSubscribers;
+﻿/*
+ * mark by garfield 20230309
+namespace Hkust.Cus.Application.EventSubscribers;
 
 public sealed partial class CapEventSubscriber : ICapSubscribe
 {
@@ -43,4 +45,4 @@ public sealed partial class CapEventSubscriber : ICapSubscribe
         if (!hasProcessed)
             await Task.CompletedTask;
     }
-}
+}*/

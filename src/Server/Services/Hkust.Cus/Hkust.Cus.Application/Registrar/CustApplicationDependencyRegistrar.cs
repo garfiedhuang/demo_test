@@ -32,6 +32,6 @@ public sealed class CustApplicationDependencyRegistrar : AbstractApplicationDepe
         //AddGrpcClient<WhseGrpc.WhseGrpcClient>(RpcConsts.WhseService, gprcPolicies);//mark by garfield 20230309
 
         //rpc-even
-        AddCapEventBus<CapEventSubscriber>();
+        //AddCapEventBus<CapEventSubscriber>();//依赖于RabbitMq服务 mark by garfield 20230309
     }
 }
