@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace Hkust.Common.Rpc.Handlers.Token;
+﻿namespace Hkust.Common.Rpc.Handlers.Token;
 
 public sealed class TokenFactory
 {

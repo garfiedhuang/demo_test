@@ -24,6 +24,7 @@ public sealed class CustApplicationDependencyRegistrar : AbstractApplicationDepe
         AddRestClient<IUsrRestClient>(RpcConsts.UsrService, restPolicies);
         AddRestClient<IMaintRestClient>(RpcConsts.MaintService, restPolicies);
         //AddRestClient<IWhseRestClient>(RpcConsts.WhseService, restPolicies);//mark by garfield 20230309
+
         //rpc-grpcclient
         var gprcPolicies = this.GenerateDefaultGrpcPolicies();
         AddGrpcClient<AuthGrpc.AuthGrpcClient>(RpcConsts.UsrService, gprcPolicies);
