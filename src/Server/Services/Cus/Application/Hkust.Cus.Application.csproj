@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\build\common.props" />
+	<ItemGroup>
+		<ProjectReference Include="..\..\Common\Rpc\Hkust.Common.Rpc.csproj" />
+		<ProjectReference Include="..\..\Common\Application\Hkust.Common.Application.csproj" />
+		<ProjectReference Include="..\Application.Contracts\Hkust.Cus.Application.Contracts.csproj" />
+		<ProjectReference Include="..\Repository\Hkust.Cus.Repository.csproj" />
+	</ItemGroup>
+</Project>
