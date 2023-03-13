@@ -18,6 +18,12 @@ public sealed class CustApplicationDependencyRegistrar : AbstractApplicationDepe
     {
         AddApplicaitonDefault();
 
+        /**
+         *
+         *各微服务，按需注册RPC服务至IOC容器中，add by garfield 20230313
+         *
+         */
+
         //rpc-restclient
         var restPolicies = this.GenerateDefaultRefitPolicies();
         AddRestClient<IAuthRestClient>(RpcConsts.UsrService, restPolicies);

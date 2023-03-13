@@ -8,6 +8,6 @@ public class RpcConsts
     public readonly static string UsrService = "hkust-usr-webapi";
     public readonly static string MaintService = "hkust-maint-webapi";
     public readonly static string CusService = "hkust-cus-webapi";
-    public readonly static string OrdService = "hkust-ord-webapi";
-    public readonly static string WhseService = "hkust-whse-webapi";
+    //public readonly static string OrdService = "hkust-ord-webapi";
+    //public readonly static string WhseService = "hkust-whse-webapi";
 }
