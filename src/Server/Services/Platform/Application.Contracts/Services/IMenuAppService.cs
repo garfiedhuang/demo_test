@@ -11,7 +11,7 @@
         /// <param name="input"></param>
         /// <returns></returns>
         [OperateLog(LogName = "新增菜单")]
-        [CachingEvict(CacheKeys = new[] { CachingConsts.MenuListCacheKey, CachingConsts.MenuTreeListCacheKey, CachingConsts.MenuRelationCacheKey, CachingConsts.MenuCodesCacheKey })]
+        [CachingEvict(CacheKeys = new[] { UsrCachingConsts.MenuListCacheKey, UsrCachingConsts.MenuTreeListCacheKey, UsrCachingConsts.MenuRelationCacheKey, UsrCachingConsts.MenuCodesCacheKey })]
         Task<AppSrvResult<long>> CreateAsync(MenuCreationDto input);
 
         /// <summary>
@@ -21,7 +21,7 @@
         /// <param name="input"></param>
         /// <returns></returns>
         [OperateLog(LogName = "修改菜单")]
-        [CachingEvict(CacheKeys = new[] { CachingConsts.MenuListCacheKey, CachingConsts.MenuTreeListCacheKey, CachingConsts.MenuRelationCacheKey, CachingConsts.MenuCodesCacheKey })]
+        [CachingEvict(CacheKeys = new[] { UsrCachingConsts.MenuListCacheKey, UsrCachingConsts.MenuTreeListCacheKey, UsrCachingConsts.MenuRelationCacheKey, UsrCachingConsts.MenuCodesCacheKey })]
         Task<AppSrvResult> UpdateAsync(long id, MenuUpdationDto input);
 
         /// <summary>
@@ -30,14 +30,14 @@
         /// <param name="id"></param>
         /// <returns></returns>
         [OperateLog(LogName = "删除菜单")]
-        [CachingEvict(CacheKeys = new[] { CachingConsts.MenuListCacheKey, CachingConsts.MenuTreeListCacheKey, CachingConsts.MenuRelationCacheKey, CachingConsts.MenuCodesCacheKey })]
+        [CachingEvict(CacheKeys = new[] { UsrCachingConsts.MenuListCacheKey, UsrCachingConsts.MenuTreeListCacheKey, UsrCachingConsts.MenuRelationCacheKey, UsrCachingConsts.MenuCodesCacheKey })]
         Task<AppSrvResult> DeleteAsync(long id);
 
         /// <summary>
         /// 获取菜单列表
         /// </summary>
         /// <returns></returns>
-        [CachingAble(CacheKey = CachingConsts.MenuTreeListCacheKey, Expiration = CachingConsts.OneYear)]
+        [CachingAble(CacheKey = UsrCachingConsts.MenuTreeListCacheKey, Expiration = UsrCachingConsts.OneYear)]
         Task<List<MenuNodeDto>> GetlistAsync();
 
         /// <summary>

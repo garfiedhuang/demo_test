@@ -18,7 +18,7 @@ public class RoleController : HkustControllerBase
     /// <param name="input">角色查询条件</param>
     /// <returns></returns>
     [HttpGet()]
-    [HkustAuthorize(PermissionConsts.Role.GetList)]
+    [HkustAuthorize(UsrPermissionConsts.Role.GetList)]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<PageModelDto<RoleDto>>> GetPagedAsync([FromQuery] RolePagedSearchDto input)
         => await _roleService.GetPagedAsync(input);
@@ -39,7 +39,7 @@ public class RoleController : HkustControllerBase
     /// <param name="id">角色ID</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
-    [HkustAuthorize(PermissionConsts.Role.Delete)]
+    [HkustAuthorize(UsrPermissionConsts.Role.Delete)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> DeleteAsync([FromRoute] long id)
         => Result(await _roleService.DeleteAsync(id));
@@ -51,7 +51,7 @@ public class RoleController : HkustControllerBase
     /// <param name="permissions">用户权限Ids</param>
     /// <returns></returns>
     [HttpPut("{id}/permissons")]
-    [HkustAuthorize(PermissionConsts.Role.SetPermissons)]
+    [HkustAuthorize(UsrPermissionConsts.Role.SetPermissons)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> SetPermissonsAsync([FromRoute] long id, [FromBody] long[] permissions)
         => Result(await _roleService.SetPermissonsAsync(new RoleSetPermissonsDto() { RoleId = id, Permissions = permissions }));
@@ -62,7 +62,7 @@ public class RoleController : HkustControllerBase
     /// <param name="input">角色</param>
     /// <returns></returns>
     [HttpPost]
-    [HkustAuthorize(PermissionConsts.Role.Create)]
+    [HkustAuthorize(UsrPermissionConsts.Role.Create)]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<long>> CreateAsync([FromBody] RoleCreationDto input)
         => CreatedResult(await _roleService.CreateAsync(input));
@@ -74,7 +74,7 @@ public class RoleController : HkustControllerBase
     /// <param name="input">角色</param>
     /// <returns></returns>
     [HttpPut("{id}")]
-    [HkustAuthorize(PermissionConsts.Role.Update)]
+    [HkustAuthorize(UsrPermissionConsts.Role.Update)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> UpdateAsync([FromRoute] long id, [FromBody] RoleUpdationDto input)
         => Result(await _roleService.UpdateAsync(id, input));

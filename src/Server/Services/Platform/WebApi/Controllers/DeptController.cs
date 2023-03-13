@@ -18,7 +18,7 @@ public class DeptController : HkustControllerBase
     /// <param name="id">部门ID</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
-    [HkustAuthorize(PermissionConsts.Dept.Delete)]
+    [HkustAuthorize(UsrPermissionConsts.Dept.Delete)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> Delete([FromRoute] long id)
         => Result(await _deptService.DeleteAsync(id));
@@ -29,7 +29,7 @@ public class DeptController : HkustControllerBase
     /// <param name="input">部门</param>
     /// <returns></returns>
     [HttpPost]
-    [HkustAuthorize(PermissionConsts.Dept.Create)]
+    [HkustAuthorize(UsrPermissionConsts.Dept.Create)]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<long>> CreateAsync([FromBody] DeptCreationDto input)
         => CreatedResult(await _deptService.CreateAsync(input));
@@ -41,7 +41,7 @@ public class DeptController : HkustControllerBase
     /// <param name="input">部门</param>
     /// <returns></returns>
     [HttpPut("{id}")]
-    [HkustAuthorize(PermissionConsts.Dept.Update)]
+    [HkustAuthorize(UsrPermissionConsts.Dept.Update)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult<long>> UpdateAsync([FromRoute] long id, [FromBody] DeptUpdationDto input)
         => Result(await _deptService.UpdateAsync(id, input));
@@ -51,7 +51,7 @@ public class DeptController : HkustControllerBase
     /// </summary>
     /// <returns></returns>
     [HttpGet()]
-    [HkustAuthorize(PermissionConsts.Dept.GetList, HkustAuthorizeAttribute.JwtWithBasicSchemes)]
+    [HkustAuthorize(UsrPermissionConsts.Dept.GetList, HkustAuthorizeAttribute.JwtWithBasicSchemes)]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<List<DeptTreeDto>>> GetListAsync()
         => await _deptService.GetTreeListAsync();

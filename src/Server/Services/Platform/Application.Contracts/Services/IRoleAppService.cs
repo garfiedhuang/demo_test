@@ -11,7 +11,7 @@
         /// <param name="input"></param>
         /// <returns></returns>
         [OperateLog(LogName = "新增角色")]
-        [CachingEvict(CacheKey = CachingConsts.RoleListCacheKey)]
+        [CachingEvict(CacheKey = UsrCachingConsts.RoleListCacheKey)]
         Task<AppSrvResult<long>> CreateAsync(RoleCreationDto input);
 
         /// <summary>
@@ -21,7 +21,7 @@
         /// <param name="input"></param>
         /// <returns></returns>
         [OperateLog(LogName = "修改角色")]
-        [CachingEvict(CacheKey = CachingConsts.RoleListCacheKey)]
+        [CachingEvict(CacheKey = UsrCachingConsts.RoleListCacheKey)]
         Task<AppSrvResult> UpdateAsync(long id, RoleUpdationDto input);
 
         /// <summary>
@@ -30,7 +30,7 @@
         /// <param name="id"></param>
         /// <returns></returns>
         [OperateLog(LogName = "删除角色")]
-        [CachingEvict(CacheKeys = new[] { CachingConsts.MenuRelationCacheKey, CachingConsts.MenuCodesCacheKey, CachingConsts.RoleListCacheKey })]
+        [CachingEvict(CacheKeys = new[] { UsrCachingConsts.MenuRelationCacheKey, UsrCachingConsts.MenuCodesCacheKey, UsrCachingConsts.RoleListCacheKey })]
         Task<AppSrvResult> DeleteAsync(long id);
 
         /// <summary>
@@ -39,7 +39,7 @@
         /// <param name="input"></param>
         /// <returns></returns>
         [OperateLog(LogName = "设置角色权限")]
-        [CachingEvict(CacheKeys = new[] { CachingConsts.MenuRelationCacheKey, CachingConsts.MenuCodesCacheKey })]
+        [CachingEvict(CacheKeys = new[] { UsrCachingConsts.MenuRelationCacheKey, UsrCachingConsts.MenuCodesCacheKey })]
         [UnitOfWork]
         Task<AppSrvResult> SetPermissonsAsync(RoleSetPermissonsDto input);
 

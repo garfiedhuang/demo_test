@@ -18,7 +18,7 @@ public class AccountAppService : AbstractAppService, IAccountAppService
 
     public async Task<AppSrvResult<UserValidatedInfoDto>> LoginAsync(UserLoginDto input)
     {
-        var accountsFilter = _bloomFilterFactory.Create(CachingConsts.BloomfilterOfAccountsKey);
+        var accountsFilter = _bloomFilterFactory.Create(UsrCachingConsts.BloomfilterOfAccountsKey);
         var exists = await accountsFilter.ExistsAsync(input.Account.ToLower());
         if (!exists)
             return Problem(HttpStatusCode.BadRequest, "用户名或密码错误");
@@ -72,7 +72,7 @@ public class AccountAppService : AbstractAppService, IAccountAppService
             await _cacheService.RemoveCachesAsync(async (cancellToken) =>
             {
                 await _userRepository.UpdateAsync(new SysUser() { Id = user.Id, Status = 0 }, UpdatingProps<SysUser>(x => x.Status), cancellToken);
-            }, _cacheService.ConcatCacheKey(CachingConsts.UserValidatedInfoKeyPrefix, user.Id));
+            }, _cacheService.ConcatCacheKey(UsrCachingConsts.UserValidatedInfoKeyPrefix, user.Id));
 
             return problem;
         }

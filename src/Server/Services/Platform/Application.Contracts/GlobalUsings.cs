@@ -4,9 +4,11 @@ global using Hkust.Common.Application.Contracts.Dtos;
 global using Hkust.Common.Application.Contracts.DtoValidator;
 global using Hkust.Common.Application.Contracts.Interfaces;
 global using Hkust.Common.Application.Contracts.ResultModels;
-global using Hkust.Common.Consts.Caching.Usr;
 global using Hkust.Common.Consts.Entity.Usr;
+global using Hkust.Common.Consts.Entity.Maint;
+//global using Hkust.Common.Consts.Caching.Usr;
+//global using Hkust.Common.Consts.Caching.Maint;
+global using UsrCachingConsts = Hkust.Common.Consts.Caching.Usr.CachingConsts;
+global using MaintCachingConsts = Hkust.Common.Consts.Caching.Maint.CachingConsts;
 global using Hkust.Platform.Application.Contracts.Dtos;
 global using FluentValidation;
-
-

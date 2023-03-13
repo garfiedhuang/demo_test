@@ -1,4 +1,6 @@
-﻿namespace Hkust.Platform.Application.BloomFilters;
+﻿using CachingConsts = Hkust.Common.Consts.Caching.Usr.CachingConsts;
+
+namespace Hkust.Platform.Application.BloomFilters;
 
 public class AccountBloomFilter : AbstractBloomFilter
 {

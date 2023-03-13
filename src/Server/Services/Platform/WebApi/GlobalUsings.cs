@@ -1,7 +1,10 @@
 ﻿global using Hkust.Infras.Core.Configuration;
 global using Hkust.Common;
 global using Hkust.Common.Application.Contracts.Dtos;
-global using Hkust.Common.Consts.Permissions.Usr;
+//global using Hkust.Common.Consts.Permissions.Usr;
+//global using Hkust.Common.Consts.Permissions.Maint;
+global using UsrPermissionConsts = Hkust.Common.Consts.Permissions.Usr.PermissionConsts;
+global using MaintPermissionConsts = Hkust.Common.Consts.Permissions.Maint.PermissionConsts;
 global using Hkust.Common.WebApi.Authentication;
 global using Hkust.Common.WebApi.Authentication.JwtBearer;
 global using Hkust.Common.WebApi.Authorization;

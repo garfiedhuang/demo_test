@@ -4,14 +4,14 @@ using Hkust.Platform.WebApi.Authorization;
 
 namespace Hkust.Platform.WebApi.Registrar;
 
-public sealed class SystemWebApiDependencyRegistrar : AbstractWebApiDependencyRegistrar
+public sealed class PlatformWebApiDependencyRegistrar : AbstractWebApiDependencyRegistrar
 {
-    public SystemWebApiDependencyRegistrar(IServiceCollection services)
+    public PlatformWebApiDependencyRegistrar(IServiceCollection services)
         : base(services)
     {//动态创建实例
     }
 
-    public SystemWebApiDependencyRegistrar(IApplicationBuilder app)
+    public PlatformWebApiDependencyRegistrar(IApplicationBuilder app)
         : base(app)
     {
     }
@@ -29,6 +29,7 @@ public sealed class SystemWebApiDependencyRegistrar : AbstractWebApiDependencyRe
         {
             endpoint.MapGrpcService<Grpc.AuthGrpcServer>();//暴露GRPC服务 mark by garfield 20230308
             endpoint.MapGrpcService<Grpc.UsrGrpcServer>();
+            endpoint.MapGrpcService<Grpc.MaintGrpcServer>();
         });
     }
 }

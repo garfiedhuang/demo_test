@@ -36,6 +36,7 @@
 		<!--<Protobuf Include="..\..\Common\Common\Protos\Rtos\*.proto" GrpcServices="Server" Link="Grpc\Protos\Rtos\%(RecursiveDir)%(Filename)%(Extension)" ProtoRoot="..\..\Common\Common\" />-->
 		<Protobuf Include="..\..\Common\Rpc\Protos\Services\authgrpc.proto" GrpcServices="Server" Link="Grpc\Protos\Services\authgrpc.proto" ProtoRoot="..\..\Common\Rpc\" />
 		<Protobuf Include="..\..\Common\Rpc\Protos\Services\usrgrpc.proto" GrpcServices="Server" Link="Grpc\Protos\Services\usrgrpc.proto" ProtoRoot="..\..\Common\Rpc\" />
+		<Protobuf Include="..\..\Common\Rpc\Protos\Services\maintgrpc.proto" GrpcServices="Server" Link="Grpc\Protos\Services\maintgrpc.proto" ProtoRoot="..\..\Common\Rpc\" />
 	</ItemGroup>
 	<ProjectExtensions>
 		<VisualStudio><UserProperties /></VisualStudio>

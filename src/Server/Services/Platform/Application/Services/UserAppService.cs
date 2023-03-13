@@ -33,11 +33,11 @@ public class UserAppService : AbstractAppService, IUserAppService
         user.Salt = Random.Shared.Next(5, false);
         user.Password = InfraHelper.Security.MD5(user.Password + user.Salt);
 
-        var cacheKey = _cacheService.ConcatCacheKey(CachingConsts.UserValidatedInfoKeyPrefix, user.Id);
-        var bloomFilterCacheKey = _bloomFilterFactory.Create(CachingConsts.BloomfilterOfCacheKey);
+        var cacheKey = _cacheService.ConcatCacheKey(UsrCachingConsts.UserValidatedInfoKeyPrefix, user.Id);
+        var bloomFilterCacheKey = _bloomFilterFactory.Create(UsrCachingConsts.BloomfilterOfCacheKey);
         await bloomFilterCacheKey.AddAsync(cacheKey);
 
-        var bloomFilterAccount = _bloomFilterFactory.Create(CachingConsts.BloomfilterOfAccountsKey);
+        var bloomFilterAccount = _bloomFilterFactory.Create(UsrCachingConsts.BloomfilterOfAccountsKey);
         await bloomFilterAccount.AddAsync(user.Account);
 
         await _userRepository.InsertAsync(user);

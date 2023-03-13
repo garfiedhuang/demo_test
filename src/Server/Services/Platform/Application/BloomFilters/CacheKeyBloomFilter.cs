@@ -29,24 +29,48 @@ public class CacheKeyBloomFilter : AbstractBloomFilter
         {
             var values = new List<string>()
             {
-                CachingConsts.MenuListCacheKey,
-                CachingConsts.MenuTreeListCacheKey,
-                CachingConsts.MenuRelationCacheKey,
-                CachingConsts.MenuCodesCacheKey,
-                CachingConsts.DetpListCacheKey,
-                CachingConsts.DetpTreeListCacheKey,
-                CachingConsts.DetpSimpleTreeListCacheKey,
-                CachingConsts.RoleListCacheKey
+                UsrCachingConsts.MenuListCacheKey,
+                UsrCachingConsts.MenuTreeListCacheKey,
+                UsrCachingConsts.MenuRelationCacheKey,
+                UsrCachingConsts.MenuCodesCacheKey,
+                UsrCachingConsts.DetpListCacheKey,
+                UsrCachingConsts.DetpTreeListCacheKey,
+                UsrCachingConsts.DetpSimpleTreeListCacheKey,
+                UsrCachingConsts.RoleListCacheKey
             };
 
             using var scope = _serviceProvider.Value.CreateScope();
+
+            #region USR模块
+
             var repository = scope.ServiceProvider.GetRequiredService<IEfRepository<SysUser>>();
             var ids = await repository
                                                     .GetAll()
                                                     .Select(x => x.Id)
                                                     .ToListAsync();
             if (ids.IsNotNullOrEmpty())
-                values.AddRange(ids.Select(x => string.Concat(CachingConsts.UserValidatedInfoKeyPrefix, CachingConsts.LinkChar, x)));
+                values.AddRange(ids.Select(x => string.Concat(UsrCachingConsts.UserValidatedInfoKeyPrefix, UsrCachingConsts.LinkChar, x)));
+            #endregion
+
+
+            #region MAINT模块
+
+            var dictRepository = scope.ServiceProvider.GetRequiredService<IEfRepository<SysDict>>();
+            var dictIds = await dictRepository
+                .Where(x => x.Pid == 0)
+                .Select(x => x.Id)
+                .ToListAsync();
+            if (dictIds.IsNotNullOrEmpty())
+                values.AddRange(dictIds.Select(x => string.Concat(MaintCachingConsts.DictSingleKeyPrefix, MaintCachingConsts.LinkChar, x)));
+
+            var cfgRepository = scope.ServiceProvider.GetRequiredService<IEfRepository<SysDict>>();
+            var cfgIds = await dictRepository
+                .GetAll()
+                .Select(x => x.Id)
+                .ToListAsync();
+            if (cfgIds.IsNotNullOrEmpty())
+                values.AddRange(cfgIds.Select(x => string.Concat(MaintCachingConsts.CfgSingleKeyPrefix, MaintCachingConsts.LinkChar, x)));
+            #endregion
 
             await InitAsync(values);
         }

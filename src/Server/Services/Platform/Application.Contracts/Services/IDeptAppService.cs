@@ -11,7 +11,7 @@
         /// <param name="input"></param>
         /// <returns></returns>
         [OperateLog(LogName = "新增部门")]
-        [CachingEvict(CacheKeys = new string[] { CachingConsts.DetpListCacheKey, CachingConsts.DetpTreeListCacheKey, CachingConsts.DetpSimpleTreeListCacheKey })]
+        [CachingEvict(CacheKeys = new string[] { UsrCachingConsts.DetpListCacheKey, UsrCachingConsts.DetpTreeListCacheKey, UsrCachingConsts.DetpSimpleTreeListCacheKey })]
         Task<AppSrvResult<long>> CreateAsync(DeptCreationDto input);
 
         /// <summary>
@@ -21,7 +21,7 @@
         /// <param name="input"></param>
         /// <returns></returns>
         [OperateLog(LogName = "修改部门")]
-        [CachingEvict(CacheKeys = new string[] { CachingConsts.DetpListCacheKey, CachingConsts.DetpTreeListCacheKey, CachingConsts.DetpSimpleTreeListCacheKey })]
+        [CachingEvict(CacheKeys = new string[] { UsrCachingConsts.DetpListCacheKey, UsrCachingConsts.DetpTreeListCacheKey, UsrCachingConsts.DetpSimpleTreeListCacheKey })]
         [UnitOfWork]
         Task<AppSrvResult> UpdateAsync(long id, DeptUpdationDto input);
 
@@ -31,14 +31,14 @@
         /// <param name="Id"></param>
         /// <returns></returns>
         [OperateLog(LogName = "删除部门")]
-        [CachingEvict(CacheKeys = new string[] { CachingConsts.DetpListCacheKey, CachingConsts.DetpTreeListCacheKey, CachingConsts.DetpSimpleTreeListCacheKey })]
+        [CachingEvict(CacheKeys = new string[] {UsrCachingConsts.DetpListCacheKey, UsrCachingConsts.DetpTreeListCacheKey, UsrCachingConsts.DetpSimpleTreeListCacheKey })]
         Task<AppSrvResult> DeleteAsync(long Id);
 
         /// <summary>
         /// 部门树结构
         /// </summary>
         /// <returns></returns>
-        [CachingAble(CacheKey = CachingConsts.DetpTreeListCacheKey, Expiration = CachingConsts.OneYear)]
+        [CachingAble(CacheKey = UsrCachingConsts.DetpTreeListCacheKey, Expiration = UsrCachingConsts.OneYear)]
         Task<List<DeptTreeDto>> GetTreeListAsync();
     }
 }

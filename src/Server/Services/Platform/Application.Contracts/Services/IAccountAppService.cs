@@ -20,7 +20,7 @@
         /// <param name="input"></param>
         /// <returns></returns>
         [OperateLog(LogName = "修改密码")]
-        [CachingEvict(CacheKeyPrefix = CachingConsts.UserValidatedInfoKeyPrefix)]
+        [CachingEvict(CacheKeyPrefix = UsrCachingConsts.UserValidatedInfoKeyPrefix)]
         Task<AppSrvResult> UpdatePasswordAsync([CachingParam] long id, UserChangePwdDto input);
 
         /// <summary>
@@ -29,7 +29,7 @@
         /// <param name="id"></param>
         /// <returns></returns>
         //[OperateLog(LogName = "获取认证信息")]
-        [CachingAble(CacheKeyPrefix = CachingConsts.UserValidatedInfoKeyPrefix)]
+        [CachingAble(CacheKeyPrefix = UsrCachingConsts.UserValidatedInfoKeyPrefix)]
         Task<UserValidatedInfoDto> GetUserValidatedInfoAsync([CachingParam] long id) => Task.FromResult<UserValidatedInfoDto>(null);
 
         /// <summary>
@@ -38,7 +38,7 @@
         /// <param name="id"></param>
         /// <returns></returns>
         [OperateLog(LogName = "移除认证信息")]
-        [CachingEvict(CacheKeyPrefix = CachingConsts.UserValidatedInfoKeyPrefix)]
+        [CachingEvict(CacheKeyPrefix = UsrCachingConsts.UserValidatedInfoKeyPrefix)]
         Task<AppSrvResult> DeleteUserValidateInfoAsync([CachingParam] long id) => Task.FromResult(new AppSrvResult());
 
         /// <summary>

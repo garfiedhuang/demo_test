@@ -4,8 +4,8 @@ namespace Hkust.Maint.Application.Services.Caching;
 
 public sealed class CacheService : AbstractCacheService, ICachePreheatable
 {
-    private Lazy<IDistributedLocker> _dictributeLocker;
-    private ILogger<CacheService> _logger;
+    private readonly Lazy<IDistributedLocker> _dictributeLocker;
+    private readonly ILogger<CacheService> _logger;
 
     public CacheService(
         Lazy<ICacheProvider> cacheProvider,
@@ -30,8 +30,16 @@ public sealed class CacheService : AbstractCacheService, ICachePreheatable
         if (exists)
             return;
 
+        /* old logic mark by garfield 20230313
         var flag = await _dictributeLocker.Value.LockAsync(CachingConsts.DictPreheatedKey);
         if (!flag.Success)
+        {
+            await Task.Delay(500);
+            await PreheatAllDictsAsync();
+        }*/
+
+        var (Success, _) = await _dictributeLocker.Value.LockAsync(CachingConsts.DictPreheatedKey);
+        if (!Success)
         {
             await Task.Delay(500);
             await PreheatAllDictsAsync();
@@ -70,7 +78,7 @@ public sealed class CacheService : AbstractCacheService, ICachePreheatable
 
         var serverInfo = ServiceProvider.Value.GetService<IServiceInfo>();
         await CacheProvider.Value.SetAsync(CachingConsts.DictPreheatedKey, serverInfo.Version, TimeSpan.FromSeconds(CachingConsts.OneYear));
-        _logger.LogInformation($"finished({parentDtos.Count}) preheat {CachingConsts.DictSingleKeyPrefix}");
+        _logger.LogInformation("finished({Count}) preheat {DictSingleKeyPrefix}", parentDtos.Count, CachingConsts.DictSingleKeyPrefix);
     }
 
     private async Task PreheatAllCfgsAsync()
@@ -79,8 +87,17 @@ public sealed class CacheService : AbstractCacheService, ICachePreheatable
         if (exists)
             return;
 
+        /* old logic mark by garfield 20230313
         var flag = await _dictributeLocker.Value.LockAsync(CachingConsts.CfgPreheatedKey);
         if (!flag.Success)
+        {
+            await Task.Delay(500);
+            await PreheatAllCfgsAsync();
+        }
+        */
+
+        var (Success, _) = await _dictributeLocker.Value.LockAsync(CachingConsts.CfgPreheatedKey);
+        if (!Success)
         {
             await Task.Delay(500);
             await PreheatAllCfgsAsync();
@@ -109,6 +126,6 @@ public sealed class CacheService : AbstractCacheService, ICachePreheatable
 
         var serverInfo = ServiceProvider.Value.GetService<IServiceInfo>();
         await CacheProvider.Value.SetAsync(CachingConsts.CfgPreheatedKey, serverInfo.Version, TimeSpan.FromSeconds(CachingConsts.OneYear));
-        _logger.LogInformation($"finished({cfgDtos.Count}) preheat {CachingConsts.CfgSingleKeyPrefix}");
+        _logger.LogInformation("finished({Count}) preheat {CfgSingleKeyPrefix}", cfgDtos.Count, CachingConsts.CfgSingleKeyPrefix);
     }
 }

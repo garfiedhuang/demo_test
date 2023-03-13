@@ -28,7 +28,7 @@ public class MenuController : HkustControllerBase
     /// <param name="menuDto">菜单</param>
     /// <returns></returns>
     [HttpPost]
-    [HkustAuthorize(PermissionConsts.Menu.Create)]
+    [HkustAuthorize(UsrPermissionConsts.Menu.Create)]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<long>> CreateAsync([FromBody] MenuCreationDto menuDto)
         => CreatedResult(await _menuService.CreateAsync(menuDto));
@@ -40,7 +40,7 @@ public class MenuController : HkustControllerBase
     /// <param name="input">菜单</param>
     /// <returns></returns>
     [HttpPut("{id}")]
-    [HkustAuthorize(PermissionConsts.Menu.Update)]
+    [HkustAuthorize(UsrPermissionConsts.Menu.Update)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> UpdateAsync([FromRoute] long id, [FromBody] MenuUpdationDto input)
         => Result(await _menuService.UpdateAsync(id, input));
@@ -51,7 +51,7 @@ public class MenuController : HkustControllerBase
     /// <param name="id">菜单ID</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
-    [HkustAuthorize(PermissionConsts.Menu.Delete)]
+    [HkustAuthorize(UsrPermissionConsts.Menu.Delete)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> DeleteAsync([FromRoute] long id)
         => Result(await _menuService.DeleteAsync(id));
@@ -61,7 +61,7 @@ public class MenuController : HkustControllerBase
     /// </summary>
     /// <returns></returns>
     [HttpGet()]
-    [HkustAuthorize(PermissionConsts.Menu.GetList)]
+    [HkustAuthorize(UsrPermissionConsts.Menu.GetList)]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<List<MenuNodeDto>>> GetlistAsync()
         => await _menuService.GetlistAsync();

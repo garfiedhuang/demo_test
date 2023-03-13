@@ -1,13 +1,15 @@
 ﻿using Hkust.Common.Rpc.Grpc.Messages;
-using AutoMapper;
 
 namespace Hkust.Platform.Application.AutoMapper;
 
-public sealed class UsrProfile : Profile
+public sealed class PlatformProfile : Profile
 {
-    public UsrProfile()
+    public PlatformProfile()
     {
         CreateMap(typeof(PagedModel<>), typeof(PageModelDto<>)).ForMember("XData", opt => opt.Ignore());
+
+        #region USR模块
+
         CreateMap(typeof(ZTreeNodeDto<,>), typeof(Node<>)).IgnoreAllPropertiesWithAnInaccessibleSetter();
         CreateMap<MenuCreationDto, SysMenu>();
         CreateMap<MenuUpdationDto, SysMenu>();
@@ -30,5 +32,25 @@ public sealed class UsrProfile : Profile
 
         CreateMap<LoginRequest, UserLoginDto>();
         CreateMap<DeptTreeDto, DeptReply>();
+
+        #endregion
+
+        #region MAINT模块
+
+        CreateMap<OpsLogCreationDto, OperationLog>();
+        CreateMap<OperationLog, OpsLogDto>();
+        CreateMap<LoginLog, LoginLogDto>();
+        CreateMap<LoggerLog, NlogLogDto>();
+        CreateMap<SysNloglogProperty, NlogLogPropertyDto>();
+        CreateMap<CfgCreationDto, SysCfg>();
+        CreateMap<SysCfg, CfgDto>();
+
+        CreateMap<DictCreationDto, SysDict>();
+        CreateMap<SysDict, DictDto>();
+        CreateMap<SysNotice, NoticeDto>().ReverseMap();
+
+        CreateMap<DictDto, DictReply>();
+
+        #endregion
     }
 }

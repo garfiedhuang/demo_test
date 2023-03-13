@@ -20,7 +20,7 @@
         /// <param name="input"></param>
         /// <returns></returns>
         [OperateLog(LogName = "修改用户")]
-        [CachingEvict(CacheKeyPrefix = CachingConsts.UserValidatedInfoKeyPrefix)]
+        [CachingEvict(CacheKeyPrefix = UsrCachingConsts.UserValidatedInfoKeyPrefix)]
         Task<AppSrvResult> UpdateAsync([CachingParam] long id, UserUpdationDto input);
 
         /// <summary>
@@ -29,7 +29,7 @@
         /// <param name="id"></param>
         /// <returns></returns>
         [OperateLog(LogName = "删除用户")]
-        [CachingEvict(CacheKeyPrefix = CachingConsts.UserValidatedInfoKeyPrefix)]
+        [CachingEvict(CacheKeyPrefix = UsrCachingConsts.UserValidatedInfoKeyPrefix)]
         Task<AppSrvResult> DeleteAsync([CachingParam] long id);
 
         /// <summary>
@@ -39,8 +39,8 @@
         /// <param name="input"></param>
         /// <returns></returns>
         [OperateLog(LogName = "设置用户角色")]
-        [CachingEvict(CacheKeys = new[] { CachingConsts.MenuRelationCacheKey, CachingConsts.MenuCodesCacheKey }
-                             , CacheKeyPrefix = CachingConsts.UserValidatedInfoKeyPrefix)]
+        [CachingEvict(CacheKeys = new[] { UsrCachingConsts.MenuRelationCacheKey, UsrCachingConsts.MenuCodesCacheKey }
+                             , CacheKeyPrefix = UsrCachingConsts.UserValidatedInfoKeyPrefix)]
         Task<AppSrvResult> SetRoleAsync([CachingParam] long id, UserSetRoleDto input);
 
         /// <summary>
@@ -50,7 +50,7 @@
         /// <param name="status"></param>
         /// <returns></returns>
         [OperateLog(LogName = "修改用户状态")]
-        [CachingEvict(CacheKeyPrefix = CachingConsts.UserValidatedInfoKeyPrefix)]
+        [CachingEvict(CacheKeyPrefix = UsrCachingConsts.UserValidatedInfoKeyPrefix)]
         Task<AppSrvResult> ChangeStatusAsync([CachingParam] long id, int status);
 
         /// <summary>
@@ -60,7 +60,7 @@
         /// <param name="status"></param>
         /// <returns></returns>
         [OperateLog(LogName = "批量修改用户状态")]
-        [CachingEvict(CacheKeyPrefix = CachingConsts.UserValidatedInfoKeyPrefix)]
+        [CachingEvict(CacheKeyPrefix = UsrCachingConsts.UserValidatedInfoKeyPrefix)]
         Task<AppSrvResult> ChangeStatusAsync([CachingParam] IEnumerable<long> ids, int status);
 
         /// <summary>
