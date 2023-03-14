@@ -1,6 +1,6 @@
 import defaultSettings from '@/settings'
 
-const title = defaultSettings.title || 'Adnc'
+const title = defaultSettings.title || 'HKUST'
 
 export default function getPageTitle(pageTitle) {
   if (pageTitle) {

@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Adnc',
+  title: 'HKUST',
 
   /**
    * @type {boolean} true | false

@@ -61,29 +61,8 @@
 
     <el-row :gutter="20" >
       <el-col :span="12">
-        <el-collapse   class="section">
-          <el-collapse-item title="Adnc是一个.NET Core微服务开源框架" name="1">
-            <div><a href="https://aspdotnetcore.net/aspnet/" target="_blank">点击查看详情</a></div>
-          </el-collapse-item>
-          <el-collapse-item title="如何本地调试 docker安装redis mysql rabbitmq mongodb" name="2">
-            <div><a href="https://aspdotnetcore.net/dotnet-docker/" target="_blank">点击查看详情</a> </div>
-          </el-collapse-item>
-          <el-collapse-item title="如何用docker consul 部署到服务器" name="3">
-            <div><a href="https://aspdotnetcore.net/docker-consul/" target="_blank">点击查看详情</a> </div>
-          </el-collapse-item>
-          <el-collapse-item title="Refit 集成consul在asp.net core中的实践" name="4">
-            <div><a href="https://aspdotnetcore.net/refit-consul/" target="_blank">点击查看详情</a> </div>
-          </el-collapse-item>
-          <el-collapse-item title="DotNETer的青春" name="5">
-            <div><a href="https://aspdotnetcore.net/category/dotneter-1024/" target="_blank">点击查看详情</a> </div>
-          </el-collapse-item>
-          <el-collapse-item title="新时代的.NET" name="6">
-            <div><a href="https://aspdotnetcore.net/category/dotnetcore_dotnet5/" target="_blank">点击查看详情</a> </div>
-          </el-collapse-item>
 
 
-
-        </el-collapse>
       </el-col>
 
       <el-col :span="12">

@@ -40,7 +40,7 @@ export default {
     size: '布局大小'
   },
   login: {
-    title: 'Adnc',
+    title: 'HKUST',
     errorAccount:'请输入5到16位的数字和字母',
     errorPassword:'密码至少位5位',
     logIn: '登录',
