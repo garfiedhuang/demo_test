@@ -1,6 +1,6 @@
 <Project>
 	<PropertyGroup>
-		<VersionMajor>0</VersionMajor>
+		<VersionMajor>1</VersionMajor>
 		<VersionMinor>0</VersionMinor>
 		<VersionPatch>0</VersionPatch>
 		<VersionQuality>1</VersionQuality>
