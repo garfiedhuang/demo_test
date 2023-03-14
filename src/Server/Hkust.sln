@@ -49,8 +49,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Application", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bulid", "Bulid", "{5F46F98A-6505-4767-82A7-95B0E12060AC}"
 	ProjectSection(SolutionItems) = preProject
-		build\common.props = build\common.props
-		build\version.props = build\version.props
+		Services\build\common.props = Services\build\common.props
+		Services\build\version.props = Services\build\version.props
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Application.Contracts", "Services\Common\Application.Contracts\Hkust.Common.Application.Contracts.csproj", "{014411C4-C3BA-4AC7-8B26-6976897F1881}"

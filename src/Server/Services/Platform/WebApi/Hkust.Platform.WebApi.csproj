@@ -4,7 +4,7 @@
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<DockerfileContext>..\..\..</DockerfileContext>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<Description>用户中心服务</Description>
+		<Description>平台服务</Description>
 	</PropertyGroup>
 	<ItemGroup>
 	  <None Remove="swagger_miniprofiler.html" />

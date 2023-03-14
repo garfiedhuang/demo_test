@@ -4,16 +4,16 @@ namespace Hkust.Common.Application.BloomFilter;
 
 public class BloomFilterHostedService : BackgroundService
 {
-    private readonly ILogger<BloomFilterHostedService> _logger;
+    //private readonly ILogger<BloomFilterHostedService> _logger;
     private readonly IEnumerable<IBloomFilter> _bloomFilters;
     private readonly IOptions<RedisOptions> _redisOptions;
 
     public BloomFilterHostedService(
-        ILogger<BloomFilterHostedService> logger
-       , IEnumerable<IBloomFilter> bloomFilters
+        //ILogger<BloomFilterHostedService> logger, 
+        IEnumerable<IBloomFilter> bloomFilters
        , IOptions<RedisOptions> redisOptions)
     {
-        _logger = logger;
+        //_logger = logger;
         _bloomFilters = bloomFilters;
         _redisOptions = redisOptions;
     }

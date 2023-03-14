@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.WebApi", "Common.WebApi\Hkust.Common.WebApi.csproj", "{F78F811A-D98D-4610-9437-17ACB6143A37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.WebApi", "WebApi\Hkust.Common.WebApi.csproj", "{F78F811A-D98D-4610-9437-17ACB6143A37}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common", "Common\Hkust.Common.csproj", "{9716848B-9A35-43E5-B759-1EAC33A1DAE6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Application", "Common.Application\Hkust.Common.Application.csproj", "{126A076F-7B6E-4872-9990-34B3C75C3AD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Application", "Application\Hkust.Common.Application.csproj", "{126A076F-7B6E-4872-9990-34B3C75C3AD6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Application.Contracts", "Common.Application.Contracts\Hkust.Common.Application.Contracts.csproj", "{98C3344D-9CF4-4180-A2ED-4DB003DA4277}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Application.Contracts", "Application.Contracts\Hkust.Common.Application.Contracts.csproj", "{98C3344D-9CF4-4180-A2ED-4DB003DA4277}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Rpc", "Common.Rpc\Hkust.Common.Rpc.csproj", "{2F942732-3E53-413F-8160-F1A896059801}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hkust.Common.Rpc", "Rpc\Hkust.Common.Rpc.csproj", "{2F942732-3E53-413F-8160-F1A896059801}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
